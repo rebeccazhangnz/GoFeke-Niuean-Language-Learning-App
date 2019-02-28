@@ -1,5 +1,5 @@
 // const express = require('express')
-// // const db = require('../db/status')
+// const db = require('../db/status')
 // const router = express.Router()
 
 // // This api gets the feke from the database
