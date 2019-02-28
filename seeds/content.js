@@ -10,8 +10,8 @@ exports.seed = function (knex, Promise) {
         {id: 4, category_id: '2', english: 'Kumara', Niuean: 'Timala'},
         {id: 5, category_id: '3', english: 'Hello', Niuean: 'Fakaalofa atu'},
         {id: 6, category_id: '3', english: 'Goodbye', Niuean: 'Koe kia'},
-        {id: 7, category_id: '4', english: 'One', Niuean: 'Taha'},
-        {id: 8, category_id: '4', english: 'Ten', Niuean: 'Hogofulu'}
+        {id: 7, category_id: '4', english: 'Ten', Niuean: 'Hogofulu'},
+        {id: 8, category_id: '4', english: 'One', Niuean: 'Taha'}
 
       ])
     })
