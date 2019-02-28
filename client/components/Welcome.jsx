@@ -8,8 +8,6 @@ class Welcome extends React.Component {
         }
     }
 
-
-
     translate = () => {
         this.setState({
             translate: 'Start'
