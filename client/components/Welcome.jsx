@@ -1,6 +1,5 @@
 import React from 'react'
 import { Image, Container, Divider } from 'semantic-ui-react'
-import SvgSquiggle from './SvgSquiggle'
 
 const Welcome = () => {
 
@@ -17,7 +16,6 @@ const Welcome = () => {
         <h2 className='welcome-p'>
           Welcome to the feke fam. You're about to begin the journey of learning Niuean through the power of Feke. You can touch any Niuean word to see it's translation.
       </h2>
-      <SvgSquiggle />
       
       </Container>
     </div>

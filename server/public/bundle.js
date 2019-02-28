@@ -270,17 +270,6 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./client/components/SvgSquiggle.jsx":
-/*!*******************************************!*\
-  !*** ./client/components/SvgSquiggle.jsx ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/grant/Desktop/final/feke/client/components/SvgSquiggle.jsx'");
-
-/***/ }),
-
 /***/ "./client/components/Welcome.jsx":
 /*!***************************************!*\
   !*** ./client/components/Welcome.jsx ***!
@@ -293,9 +282,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
-/* harmony import */ var _SvgSquiggle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SvgSquiggle */ "./client/components/SvgSquiggle.jsx");
-/* harmony import */ var _SvgSquiggle__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_SvgSquiggle__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 
@@ -312,7 +298,7 @@ var Welcome = function Welcome() {
     centered: "true"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Divider"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "welcome-p"
-  }, "Welcome to the feke fam. You're about to begin the journey of learning Niuean through the power of Feke. You can touch any Niuean word to see it's translation."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SvgSquiggle__WEBPACK_IMPORTED_MODULE_2___default.a, null)));
+  }, "Welcome to the feke fam. You're about to begin the journey of learning Niuean through the power of Feke. You can touch any Niuean word to see it's translation.")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Welcome);
