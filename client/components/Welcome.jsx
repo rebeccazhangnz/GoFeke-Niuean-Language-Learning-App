@@ -1,29 +1,26 @@
 import React from 'react'
-import {Image, Container, Divider} from 'semantic-ui-react'
+import { Image, Container, Divider } from 'semantic-ui-react'
+import SvgSquiggle from './SvgSquiggle'
 
-const Welcome = () => (
+const Welcome = () => {
 
-  <div>
-    <Image src='https://placebear.com/g/1000/1000' size='large' circular />
-    <Container textAlign='left'>Left Aligned</Container>
-    <Container textAlign='center'>Center Aligned</Container>
-    <Container textAlign='right'>Right Aligned</Container>
-    <Container textAlign='justified'>
-      <b>Justified</b>
-      <Divider />
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-        Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-        consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
-        pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend
-        ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-        nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-        augue. Curabitur ullamcorper ultricies nisi.
-      </p>
-    </Container>
-  </div>
-)
+  return (
+    <div className='welcome-page'>
+
+      <Image src='https://placebear.com/g/1000/1000' size='large' circular centered />
+
+      {/* <Container textAlign='left'>Left Aligned</Container>
+      <Container textAlign='center'>Center Aligned</Container>
+      <Container textAlign='right'>Right Aligned</Container> */}
+      <Container textAlign='justified' centered="true" >
+        <Divider />
+        <h2 className='welcome-p'>
+          Welcome to the feke fam. You're about to begin the journey of learning Niuean through the power of Feke. You can touch any Niuean word to see it's translation.
+      </h2>
+      <SvgSquiggle />
+      
+      </Container>
+    </div>
+  )
+}
 export default Welcome

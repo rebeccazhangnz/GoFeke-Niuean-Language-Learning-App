@@ -1,8 +1,19 @@
-.welcome-page {
+body {
+    background-color: #F7D24A;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.home-page {
     text-align: center;
 }
 
-.welcome-btn {
+.home-btn {
     width: 10em;
     height: 5em;
 }
+
+.welcome-page {
+    text-align: center;
+    margin: 20px;
+}
+
