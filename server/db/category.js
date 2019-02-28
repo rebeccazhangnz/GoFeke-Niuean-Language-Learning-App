@@ -1,7 +1,7 @@
-const connection = require('.')
+const connection = require('./index')
 
-function /* */ (db = connection) {
-//   return db(/* placeholder table */)
+function getCategories (db = connection) {
+    return db(/* placeholder table */)
 // sample of a join between two tables, for informational purpose only
 //     .join('modules', 'modules.id', 'module_id')
 //     .join('exercises', 'assessments.id', 'assessment_id')
@@ -11,4 +11,5 @@ function /* */ (db = connection) {
 
 module.exports = {
  // placeholder function
+ getCategories
 }
