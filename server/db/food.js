@@ -2,7 +2,7 @@ const connection = require('./index')
 
 function getFood (db = connection) {
   return db('content')
-    .where('category_id', '2')
+    .where('category_id', 2)
     .select()
 }
 
