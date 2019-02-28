@@ -24,7 +24,7 @@ class Home extends React.Component {
         return (
             <div className='welcome-page'>
                 <h1 className='welcome-title'>Feke Welcomes you</h1>
-                <input type='button' value={this.state.translate} onMouseEnter={() => this.translate()}
+                <input className='welcome-btn' type='button' value={this.state.translate} onMouseEnter={() => this.translate()}
                     onMouseLeave={() => this.revert()} />
             </div>
         )
