@@ -232,6 +232,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "welcome-title"
       }, "Feke Welcomes you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "welcome-btn",
         type: "button",
         value: this.state.translate,
         onMouseEnter: function onMouseEnter() {
