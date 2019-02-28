@@ -3,8 +3,8 @@ const db = require('../db/cohorts')
 const router = express.Router()
 
 // This api gets the feke from the database
-router.get('/', (req, res) => {
-    db.getFeke()
+router.post('/', (req, res) => {
+    db.createFeke()
       .then(feke => {
         res.json(feke)
       })
