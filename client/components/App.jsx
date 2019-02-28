@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-// initial App.js file, subject to change
+import Home from './Home'
 
 
 const App = () => {
   return (
     <Switch>
-      <Route exact path="/" component={placeholder-component} />
+      <Route exact path="/welcome" component={Home} />
     </Switch>
   )
 }
