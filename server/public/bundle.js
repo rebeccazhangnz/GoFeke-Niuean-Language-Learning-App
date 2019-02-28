@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-/* harmony import */ var _Welcome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Welcome */ "./client/components/Welcome.jsx");
+/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home */ "./client/components/Home.jsx");
 
 
 
@@ -107,7 +107,7 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/welcome",
-    component: _Welcome__WEBPACK_IMPORTED_MODULE_2__["default"]
+    component: _Home__WEBPACK_IMPORTED_MODULE_2__["default"]
   }));
 };
 
@@ -115,10 +115,10 @@ var App = function App() {
 
 /***/ }),
 
-/***/ "./client/components/Welcome.jsx":
-/*!***************************************!*\
-  !*** ./client/components/Welcome.jsx ***!
-  \***************************************/
+/***/ "./client/components/Home.jsx":
+/*!************************************!*\
+  !*** ./client/components/Home.jsx ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -148,17 +148,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var Welcome =
+var Home =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Welcome, _React$Component);
+  _inherits(Home, _React$Component);
 
-  function Welcome() {
+  function Home() {
     var _this;
 
-    _classCallCheck(this, Welcome);
+    _classCallCheck(this, Home);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Welcome).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this));
 
     _defineProperty(_assertThisInitialized(_this), "translate", function () {
       _this.setState({
@@ -178,7 +178,7 @@ function (_React$Component) {
     return _this;
   }
 
-  _createClass(Welcome, [{
+  _createClass(Home, [{
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -200,10 +200,10 @@ function (_React$Component) {
     }
   }]);
 
-  return Welcome;
+  return Home;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Welcome);
+/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
