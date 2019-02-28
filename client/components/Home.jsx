@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class Home extends React.Component {
     constructor() {
@@ -24,8 +25,8 @@ class Home extends React.Component {
         return (
             <div className='home-page'>
                 <h1 className='home-title'>Feke Welcomes you</h1>
-                <input className='home-btn' type='button' value={this.state.translate} onMouseEnter={() => this.translate()}
-                    onMouseLeave={() => this.revert()} />
+                <Link to ='/welcome'><input className='home-btn' type='button' value={this.state.translate} onMouseEnter={() => this.translate()}
+                    onMouseLeave={() => this.revert()} /></Link>
             </div>
         )
     }
