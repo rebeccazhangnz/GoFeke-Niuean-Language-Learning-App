@@ -1,11 +1,11 @@
 const connection = require('./index')
 
-function getGreetings (db = connection) {
+function getFood (db = connection) {
   return db('content')
-    .where('category_id', '3')
+    .where('category_id', 2)
     .select()
 }
 
 module.exports = {
-  getGreetings
+  getFood
 }
