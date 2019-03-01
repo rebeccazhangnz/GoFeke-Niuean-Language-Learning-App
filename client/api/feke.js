@@ -11,3 +11,11 @@ export function getFeke () {
     })
 }
 
+export function addFeke (fekeInfo) {
+  request
+    .post(`${fekeUrl}/`)
+    .send(fekeInfo)
+    .catch(err => {
+      if (err) throw Error('Cannot add feke')
+    })
+}
