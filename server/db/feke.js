@@ -20,4 +20,4 @@ function updateFeke (fekeInfo, db = connection) {
         image: fekeInfo.image
       }
     )
- }
+}
