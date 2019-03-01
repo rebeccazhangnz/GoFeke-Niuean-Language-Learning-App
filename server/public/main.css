@@ -21,6 +21,29 @@ body {
     text-align: center;
 }
 
-.dashboard-category {
-    margin-top: 20px;
+.dashboard-container {
+    /* justify-content: space-around;
+    flex-direction: row ; */
+    margin-top: 5em;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-bottom: 10em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.dashboard-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 10em;
+    height: 150px;
+    width: 150px;
 }
