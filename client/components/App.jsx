@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './Home'
 // import Welcome from './Welcome'
 // import CreateFeke from './CreateFeke'
-import Dashboard from './Dashboard'
+import Dashboard from './Category'
 // import Quiz from './Quiz'
 import Welcome from './Welcome'
 
@@ -14,7 +14,8 @@ const App = () => {
       <Route exact path="/" component={Home} />
       <Route exact path='/welcome' component={Welcome} />
       {/* <Route exact path='/feke' component={CreateFeke} /> */}
-      <Route exact path='/dashboard' component={Dashboard} />
+      <Route exact path='/category' component={Dashboard} />
+      <Route path='/category'
       {/* <Route exact path='/quiz/:category' component={Quiz} />  */}
     </Switch>
   )
