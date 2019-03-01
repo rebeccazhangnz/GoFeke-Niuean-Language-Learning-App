@@ -4,7 +4,7 @@ exports.seed = function (knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('feke').insert([
-        {id: 1, category_id: '1', name: 'Fetufeke', village: 'Makefu', image: 'octopus.jpg', status: 'Level 1'}
+        {id: 1, category_id: '1', name: 'Fetufeke', village: 'Makefu', image: 'feke-purple.png', status: 'Level 1'}
 
       ])
     })

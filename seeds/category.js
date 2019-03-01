@@ -4,10 +4,10 @@ exports.seed = function (knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('category').insert([
-        {id: 1, name: 'Family'},
-        {id: 2, name: 'Food and drink'},
-        {id: 3, name: 'Greetings'},
-        {id: 4, name: 'Numbers'}
+        {id: 1, name: 'family'},
+        {id: 2, name: 'food'},
+        {id: 3, name: 'greetings'},
+        {id: 4, name: 'numbers'}
       ])
     })
 }
