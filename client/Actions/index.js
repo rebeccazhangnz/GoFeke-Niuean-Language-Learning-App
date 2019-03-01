@@ -1,24 +1,24 @@
 import {getCategory} from '../api/category'
 
-function requestCategory () {
+function requestContent () {
   return {
-    type: 'REQUESTING_CATEGORY'
+    type: 'REQUESTING_CONTENT'
   }
 }
 
-function receiveCategory (content) {
+function receiveContent (content) {
   return {
-    type: 'RECEIVING_CATEGORY',
+    type: 'RECEIVING_CONTENT',
     content: content
   }
 }
 
 export function fetchCategory () {
   return function (dispatch) {
-    dispatch(requestCategory())
+    dispatch(requestContent())
     getCategory(name)
       .then(content => {
-        dispatch(receiveCategory(content))
+        dispatch(receiveContent(content))
       })
   }
 }
