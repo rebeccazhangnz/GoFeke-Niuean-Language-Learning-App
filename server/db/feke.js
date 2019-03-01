@@ -2,7 +2,7 @@ const connection = require('./index')
 
 module.exports = {
   getFeke,
-  addFeke
+  updateFeke
 }
 
 function getFeke (db = connection) {
@@ -10,13 +10,14 @@ function getFeke (db = connection) {
     .select()
 }
 
-function addFeke (fekeInfo, db = connection) {
+function updateFeke (fekeInfo, db = connection) {
   return db('feke')
-    .insert(
-      {category_id: '1',
+    .where('id', 1)
+    .update(
+      {
         name: fekeInfo.name,
         village: fekeInfo.village,
-        image: fekeInfo.image,
-        status: 'Level 1'}
+        image: fekeInfo.image
+      }
     )
 }
