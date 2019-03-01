@@ -17,3 +17,10 @@ body {
     margin: 20px;
 }
 
+.dashboard-page {
+    text-align: center;
+}
+
+.dashboard-category {
+    margin-top: 20px;
+}
