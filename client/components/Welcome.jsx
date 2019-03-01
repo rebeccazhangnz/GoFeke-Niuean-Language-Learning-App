@@ -1,12 +1,12 @@
 import React from 'react'
-import { Image, Container, Divider } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
+import {Image, Container, Divider} from 'semantic-ui-react'
 
 const Welcome = () => {
-
   return (
     <div className='welcome-page'>
 
-      <Image src='https://placebear.com/g/1000/1000' size='large' circular centered />
+      <Image className="ui centered medium image" src="/images/feke-purple.png" />
 
       {/* <Container textAlign='left'>Left Aligned</Container>
       <Container textAlign='center'>Center Aligned</Container>
@@ -14,10 +14,14 @@ const Welcome = () => {
       <Container textAlign='justified' centered="true" >
         <Divider />
         <h2 className='welcome-p'>
-          Welcome to the feke fam. You're about to begin the journey of learning Niuean through the power of Feke. You can touch any Niuean word to see it's translation.
-      </h2>
-      
+          Welcome to the feke family! You're about to begin a vagahau Niue journey with help from your feke. Touch any Niuean word to see it's translation.
+        </h2>
+        <Link to ={`/feke`}>
+          <button className="ui purple button">CREATE FEKE</button>
+        </Link>
+
       </Container>
+
     </div>
   )
 }
