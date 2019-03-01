@@ -14,15 +14,11 @@ router.get('/', (req, res) => {
     })
 })
 
-
-router.post('/', (req, res) => {
-    db.createFeke()
-      .then(feke => {
-        res.json(feke)
-      })
-      .catch(err => {
-        res.status(500).send('DATABASE ERROR: ' + err.message)
-      })
-  })
+router.put('/', (req, res) => {
+  db.updateFeke(req.body)
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
 
 module.exports = router
