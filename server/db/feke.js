@@ -13,6 +13,10 @@ function getFeke (db = connection) {
 function addFeke (fekeInfo, db = connection) {
   return db('feke')
     .insert(
-      {}
+      {category_id: '1',
+        name: fekeInfo.name,
+        village: fekeInfo.village,
+        image: fekeInfo.image,
+        status: 'Level 1'}
     )
 }
