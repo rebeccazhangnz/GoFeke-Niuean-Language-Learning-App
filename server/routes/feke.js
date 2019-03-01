@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   db.addFeke(req.body)
-    .then(res.send('hello'))
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
