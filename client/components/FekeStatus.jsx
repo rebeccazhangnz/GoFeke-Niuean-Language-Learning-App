@@ -16,7 +16,7 @@ class FekeStatus extends React.Component {
           <div className='feke-details'>
             <p className='feke-name'>Name:     PLACEHOLDER_NAME</p>
           </div>
-          <div className='feke-details'>
+          <div className='ls'>
             <p className='feke-village'>Village:    PLACEHOLDER_VILLAGE</p>
           </div>
         </div>
