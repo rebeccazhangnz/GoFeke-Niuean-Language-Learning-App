@@ -1,8 +1,7 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 import Home from './Home'
-// import Welcome from './Welcome'
 import CreateFeke from './CreateFeke'
 import Dashboard from './Dashboard'
 // import Quiz from './Quiz'
@@ -17,7 +16,6 @@ const App = () => {
       <Route exact path='/feke' component={CreateFeke} />
       <Route exact path='/dashboard' component={Dashboard} />
       {/* <Route exact path='/quiz/:category' component={Quiz} />  */}
-      <Route exact path="/fekestatus" component={FekeStatus} />
     </Switch>
   )
 }
