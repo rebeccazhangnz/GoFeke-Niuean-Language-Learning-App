@@ -4,17 +4,19 @@ import React from 'react'
 const CreateFeke = () => {
   return (
     <div className='create-page'>
-    <form>
+    <form onSubmit={this.handleSubmit}>
       <h2>Create your feke friend</h2>
         <img className='create-img' src='/images/feke-green.png'/>
         <label htmlFor="name">Name </label>
-        <input type="text" />
+        <input type="text" value={this.state.item.name} onChange={this.handleChange}/>
 
         <label htmlFor="village">Village </label>
         <input type="text" />
         <input type="submit" value="Go feke!" />
       </form>
     </div>
+
+    
   )
 }
 
