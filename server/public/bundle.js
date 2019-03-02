@@ -187,6 +187,7 @@ function (_React$Component) {
     });
 
     _this.state = {
+      type: '',
       name: '',
       village: ''
     };
