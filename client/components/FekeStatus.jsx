@@ -25,4 +25,11 @@ class FekeStatus extends React.Component {
   }
 }
 
-export default FekeStatus
+function mapStateToProps (state) {
+  return {
+    feke: state.feke
+  }
+}
+
+export default connect(mapStateToProps)(FekeStatus)
+
