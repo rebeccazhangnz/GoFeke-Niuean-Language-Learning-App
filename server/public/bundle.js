@@ -192,15 +192,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home */ "./client/components/Home.jsx");
 /* harmony import */ var _Welcome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Welcome */ "./client/components/Welcome.jsx");
-/* harmony import */ var _CategoryList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CategoryList */ "./client/components/CategoryList.jsx");
-/* harmony import */ var _Flashcard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Flashcard */ "./client/components/Flashcard.jsx");
+/* harmony import */ var _CreateFeke__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CreateFeke */ "./client/components/CreateFeke.jsx");
+/* harmony import */ var _CategoryList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CategoryList */ "./client/components/CategoryList.jsx");
+/* harmony import */ var _Flashcard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Flashcard */ "./client/components/Flashcard.jsx");
 
 
- // import Welcome from './Welcome'
-// import CreateFeke from './CreateFeke'
-//import Category from './Category'
-// import Quiz from './Quiz'
 
+
+ // import Quiz from './Quiz'
 
 
 
@@ -216,11 +215,15 @@ var App = function App() {
     component: _Welcome__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
+    path: "/feke",
+    component: _CreateFeke__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
     path: "/category",
-    component: _CategoryList__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _CategoryList__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/category/:name",
-    component: _Flashcard__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _Flashcard__WEBPACK_IMPORTED_MODULE_6__["default"]
   }));
 };
 
@@ -327,6 +330,40 @@ function mapStateToProps(state) {
 
 /***/ }),
 
+/***/ "./client/components/CreateFeke.jsx":
+/*!******************************************!*\
+  !*** ./client/components/CreateFeke.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+
+
+var CreateFeke = function CreateFeke() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Name your feke and your village"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "name"
+  }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "village"
+  }, "Village"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "submit",
+    value: "Create feke"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CreateFeke); //handleSubmit will need to be defined.
+
+/***/ }),
+
 /***/ "./client/components/Flashcard.jsx":
 /*!*****************************************!*\
   !*** ./client/components/Flashcard.jsx ***!
@@ -338,8 +375,9 @@ function mapStateToProps(state) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Actions */ "./client/Actions/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _Actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Actions */ "./client/Actions/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -359,6 +397,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -402,7 +441,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var name = this.props.match.params.name;
-      this.props.dispatch(Object(_Actions__WEBPACK_IMPORTED_MODULE_1__["fetchCategory"])(name));
+      this.props.dispatch(Object(_Actions__WEBPACK_IMPORTED_MODULE_2__["fetchCategory"])(name));
     }
   }, {
     key: "render",
@@ -420,7 +459,11 @@ function (_React$Component) {
       }, "previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         key: "next",
         onClick: this.handleNext
-      }, "next"));
+      }, "next"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        key: "homebtn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/category"
+      }, "Home")));
     }
   }]);
 
@@ -433,7 +476,7 @@ function mapStateToProps(state) {
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(Flashcard));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps)(Flashcard));
 
 /***/ }),
 

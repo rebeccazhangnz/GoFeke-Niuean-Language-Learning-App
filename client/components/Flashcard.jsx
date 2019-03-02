@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {fetchCategory} from '../Actions'
 import {connect}from 'react-redux'
 
@@ -39,7 +40,8 @@ class Flashcard extends React.Component{
             <div>
                {niueanWords[this.state.index]} means {englishWords[this.state.index]}<br/>
                <button key='previous' onClick={this.handlePrevious}>previous</button>
-                <button key='next' onClick={this.handleNext}>next</button>
+                <button key='next' onClick={this.handleNext}>next</button><br/>
+                <button key='homebtn'><Link to='/category'>Home</Link></button>
             </div>
            
         )
