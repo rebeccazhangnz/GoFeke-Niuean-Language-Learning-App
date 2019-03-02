@@ -2,7 +2,7 @@ import React from 'react'
 import { Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
-import {fetchCategoryList} from '../Actions'
+import {fetchCategoryList} from '../actions'
 
 class CategoryList extends React.Component {
     constructor() {

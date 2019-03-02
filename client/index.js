@@ -15,7 +15,7 @@ let store = createStore(reducers, compose(
 
 document.addEventListener('DOMContentLoaded', () => {
   render()
-  // store.subscribe(render)
+     store.subscribe(render)
 })
 
 function render () {

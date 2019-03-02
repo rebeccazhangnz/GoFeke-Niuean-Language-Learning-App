@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {fetchCategory} from '../Actions'
+import {fetchCategory} from '../actions'
 import {connect}from 'react-redux'
 
 class Flashcard extends React.Component{
