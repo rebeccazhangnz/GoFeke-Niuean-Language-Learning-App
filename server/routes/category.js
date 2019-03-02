@@ -2,7 +2,15 @@ const express = require('express')
 const db = require('../db/category')
 const router = express.Router()
 
-// This api gets the greetings from the database
+router.get('/', (req, res)=>{
+   db.getCategoryList()
+   .then(list=>{
+     res.json(list)
+   })
+   .catch(err => {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+})
 router.get('/:name', (req, res) => {
   const name = req.params.name
   db.getCategoryIdByName(name)
