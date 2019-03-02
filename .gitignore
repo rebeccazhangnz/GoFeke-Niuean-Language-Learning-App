@@ -4,3 +4,5 @@ bundle.*
 bundle.js
 budle.js.map
 yarn.lock
+server/public/bundle.js
+server/public/bundle.js.map
