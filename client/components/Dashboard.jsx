@@ -1,12 +1,13 @@
 import React from 'react'
-import { Image } from 'semantic-ui-react'
+import { Image, Container } from 'semantic-ui-react'
+import FekeStatus from './FekeStatus'
+// import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import { Link } from 'react-router-dom'
 
-
-class Home extends React.Component {
-    constructor() {
-        super()
+class Dashboard extends React.Component {
+    constructor(props) {
+        super(props)
         this.state = {
             name: 'Micah',
             village: 'Hakupu'
@@ -19,21 +20,50 @@ class Home extends React.Component {
     render() {
         return (
             <div className='dashboard-page'>
-                <div className='dashboard-feke'>
-                    <Image src='/images/feke-green.png' size="medium" centered />
-                    <h1>Name: <span>{this.state.name}</span></h1>
-                    <h1>Village: <span>{this.state.village}</span></h1>
-                </div>
-                <div className='dashboard-category'>
-                    {/* LINKS TO CATEGORY */}
-                    <h1>GREETINGS</h1>
-                    <h1>FAMILY</h1>
-                    <h1>FOOD</h1>
-                    <h1>NUMBERS</h1>
-                </div>
-            </div>
+                <FekeStatus />
+                <Container textAlign='justified' centered="true" >
+                    <div className='dashboard-container'>
+                        {/* LINKS TO CATEGORY */}
+                        <div className='dashboard-btn'>
+                            {/* <Link to={`/greetings`}> */}
+                            <button className="dashboard-btn ui purple button" >GREETINGS</button>
+
+                            {/* </Link> */}
+                        </div>
+                        <div className='dashboard-btn'>
+                            {/* <Link to={`/family`}> */}
+                            <button className="dashboard-btn ui purple button" >FAMILY</button>
+
+                            {/* </Link> */}
+                        </div>
+
+                        <div className='dashboard-btn'>
+                            {/* <Link to={'/food'}> */}
+                            <button className="dashboard-btn ui purple button" >FOOD</button>
+
+                            {/* </Link> */}
+                        </div>
+
+                        <div className='dashboard-btn'>
+                            {/* <Link to={'/numbers'}> */}
+                            <button className="dashboard-btn ui purple button" >NUMBERS</button>
+                            {/* </Link> */}
+                        </div>
+                    </div>
+
+                </Container>
+            </div >
         )
     }
 }
 
-export default Home
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         //   placeHolderProps: (placeholderCategoryName) => {
+//         // dispatch(placeHolderAction(placeholderCategoryName))
+//         //   }
+//     }
+// }
+
+// connect(mapDispatchToProps)()Dashboard
+export default Dashboard
