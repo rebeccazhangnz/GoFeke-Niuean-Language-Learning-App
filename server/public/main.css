@@ -1,6 +1,10 @@
 body {
     background-color: #F7D24A;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Libre Fran', sans-serif;
+    background-image: url(images/leaves.png), url(images/footerwaves.png);
+    background-repeat: no-repeat; 
+    background-position: center bottom, bottom;
+    background-size: 100%;
 }
 
 /* HOME PAGE CSS */
@@ -18,6 +22,13 @@ body {
     text-align: center;
     margin: 20px;
 }
+
+.homefooter {
+  background: url(images/footer.png);
+  background-size: 100%;
+}
+
+
 
 /* DASHBOARD CSS  */
 
