@@ -6,23 +6,23 @@ class Home extends React.Component {
     constructor() {
         super()
         this.state = {
-            translate: 'Kamata'
+            translate: 'Start'
         }
     }
 
     componentDidMount() {
-        return this.setState({ translate: 'Kamata' })
+        return this.setState({ translate: 'Start' })
     }
 
     translate = () => {
         this.setState({
-            translate: 'Start'
+            translate: 'Kamata'
         })
     }
 
     revert = () => {
         this.setState({
-            translate: 'Kamata'
+            translate: 'Start'
         })
     }
 
