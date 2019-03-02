@@ -42,9 +42,17 @@ exports.seed = function (knex, Promise) {
         {id: 36, category_id: 2, english: 'Banana', Niuean: 'Futi'},
         {id: 37, category_id: 2, english: 'Apple', Niuean: 'Fua apala'},
         {id: 38, category_id: 3, english: 'Hello', Niuean: 'Fakaalofa atu'},
-        {id: 39, category_id: 3, english: 'Goodbye', Niuean: 'Koe kia'},
-        {id: 40, category_id: 4, english: 'Ten', Niuean: 'Hogofulu'},
-        {id: 41, category_id: 4, english: 'One', Niuean: 'Taha'}
+        {id: 39, category_id: 3, english: 'Greetings', Niuean: 'Fakaalofa lahi atu'},
+        {id: 40, category_id: 3, english: 'Greetings to you both', Niuean: 'Fakaalofa lahi atu kia mua'},
+        {id: 41, category_id: 3, english: 'Greetings to you all', Niuean: 'Fakaalofa lahi atu kia mutolu oti'},
+        {id: 42, category_id: 3, english: 'Precious greetings to you', Niuean: 'Fakaalofa hofihofi atu'},
+        {id: 43, category_id: 3, english: 'Good morning', Niuean: 'Monuina e pogipogi'},
+        {id: 44, category_id: 3, english: 'Have a nice day', Niuean: 'Monuina e aho'},
+        {id: 45, category_id: 3, english: 'Good evening', Niuean: 'Monuina e afiafi'},
+        {id: 46, category_id: 3, english: 'Good night', Niuean: 'Monuina e po'},
+        {id: 47, category_id: 3, english: 'Goodbye', Niuean: 'Koe kia'},
+        {id: 48, category_id: 4, english: 'Ten', Niuean: 'Hogofulu'},
+        {id: 49, category_id: 4, english: 'One', Niuean: 'Taha'}
 
       ])
     })
