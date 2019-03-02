@@ -51,8 +51,27 @@ exports.seed = function (knex, Promise) {
         {id: 45, category_id: 3, english: 'Good evening', Niuean: 'Monuina e afiafi'},
         {id: 46, category_id: 3, english: 'Good night', Niuean: 'Monuina e po'},
         {id: 47, category_id: 3, english: 'Goodbye', Niuean: 'Koe kia'},
-        {id: 48, category_id: 4, english: 'Ten', Niuean: 'Hogofulu'},
-        {id: 49, category_id: 4, english: 'One', Niuean: 'Taha'}
+        {id: 48, category_id: 4, english: 'Zero', Niuean: 'Nakai'},
+        {id: 49, category_id: 4, english: 'One', Niuean: 'Taha'},
+        {id: 50, category_id: 4, english: 'Two', Niuean: 'Ua'},
+        {id: 51, category_id: 4, english: 'Three', Niuean: 'Tolu'},
+        {id: 52, category_id: 4, english: 'Four', Niuean: 'Fa'},
+        {id: 53, category_id: 4, english: 'Five', Niuean: 'Lima'},
+        {id: 54, category_id: 4, english: 'Six', Niuean: 'Ono'},
+        {id: 55, category_id: 4, english: 'Seven', Niuean: 'Fitu'},
+        {id: 56, category_id: 4, english: 'Eight', Niuean: 'Valu'},
+        {id: 57, category_id: 4, english: 'Nine', Niuean: 'Hiva'},
+        {id: 58, category_id: 4, english: 'Ten', Niuean: 'Hogofulu'},
+        {id: 59, category_id: 4, english: 'Eleven', Niuean: 'Hogofulu ma taha'},
+        {id: 60, category_id: 4, english: 'Twelve', Niuean: 'Hogofulu ma ua'},
+        {id: 61, category_id: 4, english: 'Thirteen', Niuean: 'Hogofulu ma tolu'},
+        {id: 62, category_id: 4, english: 'Fourteen', Niuean: 'Hogofulu ma fa'},
+        {id: 63, category_id: 4, english: 'Fifteen', Niuean: 'Hogofulu ma lima'},
+        {id: 64, category_id: 4, english: 'Sixteen', Niuean: 'Hogofulu ma ono'},
+        {id: 65, category_id: 4, english: 'Seventeen', Niuean: 'Hogofulu ma fitu'},
+        {id: 66, category_id: 4, english: 'Eighteen', Niuean: 'Hogofulu ma valu'},
+        {id: 67, category_id: 4, english: 'Nineteen', Niuean: 'Hogofulu ma hiva'},
+        {id: 68, category_id: 4, english: 'Twenty', Niuean: 'Ua hogofulu'}
 
       ])
     })
