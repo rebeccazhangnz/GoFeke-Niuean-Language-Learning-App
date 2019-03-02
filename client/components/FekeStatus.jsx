@@ -1,7 +1,11 @@
 import React from 'react'
-// import {connect} from 'react-redux'
+import {connect} from 'react-redux'
+import {getFekeStatus} from '../actions/getFekeStatus'
 
 class FekeStatus extends React.Component {
+  componentDidMount () {
+    this.props.dispatch(getFekeStatus())
+  }
   render () {
     return (
       <div className = 'fekeStatus'>
@@ -11,4 +15,10 @@ class FekeStatus extends React.Component {
   }
 }
 
-export default FekeStatus
+function mapStateToProps (state) {
+  return {
+    feke: state.feke
+  }
+}
+
+export default connect(mapStateToProps)(FekeStatus)
