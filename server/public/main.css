@@ -3,6 +3,8 @@ body {
     font-family: 'Libre Franklin', sans-serif;
 }
 
+/* HOME PAGE CSS */
+
 .home-page {
     text-align: center;
 }
@@ -17,6 +19,8 @@ body {
     margin: 20px;
 }
 
+/* DASHBOARD CSS  */
+
 .dashboard-page {
     text-align: center;
 }
@@ -24,10 +28,10 @@ body {
 .dashboard-container {
     /* justify-content: space-around;
     flex-direction: row ; */
-    margin-top: 5em;
-    margin-left: 10em;
-    margin-right: 10em;
-    margin-bottom: 10em;
+    margin-top: 2em;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
@@ -47,3 +51,62 @@ body {
     height: 150px;
     width: 150px;
 }
+
+.fekeStatus {
+    margin: auto;
+    border-style: solid;
+    text-align: center;
+    width: 75vw;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.25fr;
+    grid-template-areas: ". .";
+}
+
+.feke-image {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.feke-details-container {
+    float: right;
+    width: 100%;
+}
+
+.feke-details {
+    width: 100%;
+    text-align: left;
+}
+
+.feke-name {
+    height: 100px;
+    padding: 1em;
+}
+
+.feke-village {
+    height: 100px;
+    padding: 1em;
+}
+
+/* CREATEFEKE CSS */
+
+.createfeke-page {
+    text-align: center;
+}
+
+/* @media only screen and (max-width: 600px) {
+    .feke-details-container {
+    
+    }
+  } */
+
+@media only screen and (max-width: 600px) {
+    .dashboard-container {
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+  }
