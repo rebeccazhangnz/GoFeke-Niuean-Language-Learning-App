@@ -12,26 +12,26 @@ function receiveContent (content) {
     content: content
   }
 }
-function requestCategoryList(){
+function requestCategoryList () {
   return {
     type: 'REQUESTING_CATEGORY_LIST'
   }
 }
-function receiveCategoryList(list){
+function receiveCategoryList (list) {
   return {
     type: 'RECEIVING_CATEGORY_LIST',
     categoryList: list
   }
 }
-export function fetchCategoryList(){
-  return function (dispatch){
+export function fetchCategoryList () {
+  return function (dispatch) {
     dispatch(requestCategoryList())
-     getCategoryList()
-     .then(list=>{
-      console.log('actionside', list)
-      dispatch(receiveCategoryList(list))
-    })
-  } 
+    getCategoryList()
+      .then(list => {
+        console.log('actionside', list)
+        dispatch(receiveCategoryList(list))
+      })
+  }
 }
 
 export function fetchCategory (name) {
