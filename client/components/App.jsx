@@ -7,6 +7,7 @@ import CreateFeke from './CreateFeke'
 import Dashboard from './Dashboard'
 // import Quiz from './Quiz'
 import Welcome from './Welcome'
+import FekeStatus from './FekeStatus'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Route exact path='/feke' component={CreateFeke} />
       <Route exact path='/dashboard' component={Dashboard} />
       {/* <Route exact path='/quiz/:category' component={Quiz} />  */}
+      <Route exact path="/fekestatus" component={FekeStatus} />
     </Switch>
   )
 }
