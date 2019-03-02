@@ -3,6 +3,8 @@ body {
     font-family: 'Libre Franklin', sans-serif;
 }
 
+/* HOME PAGE CSS */
+
 .home-page {
     text-align: center;
 }
@@ -16,6 +18,8 @@ body {
     text-align: center;
     margin: 20px;
 }
+
+/* DASHBOARD CSS  */
 
 .dashboard-page {
     text-align: center;
@@ -84,6 +88,12 @@ body {
 .feke-village {
     height: 100px;
     padding: 1em;
+}
+
+/* CREATEFEKE CSS */
+
+.createfeke-page {
+    text-align: center;
 }
 
 /* @media only screen and (max-width: 600px) {
