@@ -98,7 +98,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCategoryList", function() { return fetchCategoryList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCategory", function() { return fetchCategory; });
 /* harmony import */ var _api_category__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api/category */ "./client/api/category.js");
-/* harmony import */ var _api_category__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_api_category__WEBPACK_IMPORTED_MODULE_0__);
 
 
 function requestContent() {
@@ -188,10 +187,31 @@ function getFekeStatus() {
 /*!********************************!*\
   !*** ./client/api/category.js ***!
   \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: getCategoryList, getCategory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/jennyfang/Documents/feke/client/api/category.js: `getCategoryList` has already been exported. Exported identifiers must be unique. (23:0)\n\n\u001b[0m \u001b[90m 21 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m 22 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m getCategoryList () {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 | \u001b[39m  \u001b[36mreturn\u001b[39m request\u001b[0m\n\u001b[0m \u001b[90m 25 | \u001b[39m    \u001b[33m.\u001b[39mget(categoryApi)\u001b[0m\n\u001b[0m \u001b[90m 26 | \u001b[39m    \u001b[33m.\u001b[39mthen(res \u001b[33m=>\u001b[39m res\u001b[33m.\u001b[39mbody)\u001b[0m\n    at Object.raise (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:3831:17)\n    at Object.checkDuplicateExports (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:8522:18)\n    at Object.checkExport (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:8472:16)\n    at Object.parseExport (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:8294:12)\n    at Object.parseStatementContent (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:7347:27)\n    at Object.parseStatement (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:7243:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:7810:25)\n    at Object.parseBlockBody (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:7797:10)\n    at Object.parseTopLevel (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:7181:10)\n    at Object.parse (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:8660:17)\n    at parse (/Users/jennyfang/Documents/feke/node_modules/@babel/parser/lib/index.js:10660:38)\n    at parser (/Users/jennyfang/Documents/feke/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/Users/jennyfang/Documents/feke/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/Users/jennyfang/Documents/feke/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/Users/jennyfang/Documents/feke/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at process.nextTick (/Users/jennyfang/Documents/feke/node_modules/@babel/core/lib/transform.js:34:34)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCategoryList", function() { return getCategoryList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCategory", function() { return getCategory; });
+/* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
+/* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
+
+var categoryApi = 'http://localhost:3000/api/v1/category';
+function getCategoryList() {
+  return superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get(categoryApi).then(function (res) {
+    return res.body;
+  }).catch(function (err) {
+    if (err) throw Error('Cannot get categoryList');
+  });
+}
+function getCategory(name) {
+  return superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(categoryApi, "/").concat(name)).then(function (res) {
+    return res.body;
+  }).catch(function (err) {
+    if (err) throw Error('Cannot get contents');
+  });
+}
 
 /***/ }),
 

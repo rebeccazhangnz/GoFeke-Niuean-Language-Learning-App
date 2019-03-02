@@ -19,12 +19,3 @@ export function getCategory (name) {
       if (err) throw Error('Cannot get contents')
     })
 }
-
-export function getCategoryList () {
-  return request
-    .get(categoryApi)
-    .then(res => res.body)
-    .catch(err => {
-      if (err) throw Error('Cannot get category list')
-    })
-}
