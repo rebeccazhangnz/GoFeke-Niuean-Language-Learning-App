@@ -1,10 +1,9 @@
 const connection = require('./index')
 
-function getCategoryList(db=connection){
+function getCategoryList (db = connection) {
   return db('category')
-  .select()
+    .select()
 }
-
 function getCategoryIdByName (name, db = connection) {
   return db('category')
     .where('category.name', name)
@@ -19,6 +18,6 @@ function getContent (id, db = connection) {
 }
 module.exports = {
   getContent,
-  getCategoryIdByName,
-  getCategoryList
+  getCategoryList,
+  getCategoryIdByName
 }

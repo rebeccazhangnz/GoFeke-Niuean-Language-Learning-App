@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const CreateFeke = () => {
   return (
@@ -11,11 +11,11 @@ const CreateFeke = () => {
         <label htmlFor="village">Village</label>
         <input type="text" />
         <input type="submit" value="Create feke" />
-        </form>
-      </div>
+      </form>
+    </div>
   )
 }
 
 export default CreateFeke
 
-//handleSubmit will need to be defined. 
+// handleSubmit will need to be defined.

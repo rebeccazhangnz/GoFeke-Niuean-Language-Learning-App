@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import { BrowserRouter as Router } from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 import App from './components/App'
 import reducers from './reducers'
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
      store.subscribe(render)
 })
 
-function render() {
+function render () {
   ReactDOM.render(
-   <Provider store={store}>
-    <Router>
-      <App />
-    </Router>,
-   </Provider>,
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router>,
+    </Provider>,
     document.getElementById('root')
   )
 }

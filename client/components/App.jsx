@@ -7,6 +7,7 @@ import CreateFeke from './CreateFeke'
 // import Quiz from './Quiz'
 import CategoryList from './CategoryList'
 import Flashcard from './Flashcard'
+import FekeStatus from './FekeStatus'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route exact path='/category' component={CategoryList} />
       <Route  path ='/category/:name' component={Flashcard}/>
       {/* <Route exact path='/quiz/:category' component={Quiz} />  */}
+      <Route exact path="/fekestatus" component={FekeStatus} />
     </Switch>
   )
 }
