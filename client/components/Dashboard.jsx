@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image, Container } from 'semantic-ui-react'
+import FekeStatus from './FekeStatus'
 // import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -19,11 +20,7 @@ class Dashboard extends React.Component {
     render() {
         return (
             <div className='dashboard-page'>
-                <div className='dashboard-feke'>
-                    <Image src='/images/feke-green.png' size="medium" centered />
-                    <h1>Name: <span>{this.state.name}</span></h1>
-                    <h1>Village: <span>{this.state.village}</span></h1>
-                </div>
+                <FekeStatus />
                 <Container textAlign='justified' centered="true" >
                     <div className='dashboard-container'>
                         {/* LINKS TO CATEGORY */}
