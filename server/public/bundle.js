@@ -86,9 +86,46 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./client/Actions/index.js":
+/***/ "./client/actions/getFekeStatus.js":
+/*!*****************************************!*\
+  !*** ./client/actions/getFekeStatus.js ***!
+  \*****************************************/
+/*! exports provided: getFekeStatus */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFekeStatus", function() { return getFekeStatus; });
+/* harmony import */ var _api_feke__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api/feke */ "./client/api/feke.js");
+
+
+function requestFeke() {
+  return {
+    type: 'REQUESTING_FEKE'
+  };
+}
+
+function receiveFeke(feke) {
+  return {
+    type: 'RECEIVING_FEKE',
+    feke: feke
+  };
+}
+
+function getFekeStatus() {
+  return function (dispatch) {
+    dispatch(requestFeke());
+    Object(_api_feke__WEBPACK_IMPORTED_MODULE_0__["getFeke"])().then(function (feke) {
+      dispatch(receiveFeke(feke));
+    });
+  };
+}
+
+/***/ }),
+
+/***/ "./client/actions/index.js":
 /*!*********************************!*\
-  !*** ./client/Actions/index.js ***!
+  !*** ./client/actions/index.js ***!
   \*********************************/
 /*! exports provided: fetchCategoryList, fetchCategory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -140,43 +177,6 @@ function fetchCategory(name) {
     dispatch(requestContent());
     Object(_api_category__WEBPACK_IMPORTED_MODULE_0__["getCategory"])(name).then(function (content) {
       dispatch(receiveContent(content));
-    });
-  };
-}
-
-/***/ }),
-
-/***/ "./client/actions/getFekeStatus.js":
-/*!*****************************************!*\
-  !*** ./client/actions/getFekeStatus.js ***!
-  \*****************************************/
-/*! exports provided: getFekeStatus */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFekeStatus", function() { return getFekeStatus; });
-/* harmony import */ var _api_feke__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api/feke */ "./client/api/feke.js");
-
-
-function requestFeke() {
-  return {
-    type: 'REQUESTING_FEKE'
-  };
-}
-
-function receiveFeke(feke) {
-  return {
-    type: 'RECEIVING_FEKE',
-    feke: feke
-  };
-}
-
-function getFekeStatus() {
-  return function (dispatch) {
-    dispatch(requestFeke());
-    Object(_api_feke__WEBPACK_IMPORTED_MODULE_0__["getFeke"])().then(function (feke) {
-      dispatch(receiveFeke(feke));
     });
   };
 }
@@ -318,7 +318,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _Actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Actions */ "./client/Actions/index.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -364,7 +364,7 @@ function (_React$Component) {
   _createClass(CategoryList, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.dispatch(Object(_Actions__WEBPACK_IMPORTED_MODULE_4__["fetchCategoryList"])());
+      this.props.dispatch(Object(_actions__WEBPACK_IMPORTED_MODULE_4__["fetchCategoryList"])());
     }
   }, {
     key: "render",
@@ -528,7 +528,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-/* harmony import */ var _Actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Actions */ "./client/Actions/index.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -593,7 +593,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var name = this.props.match.params.name;
-      this.props.dispatch(Object(_Actions__WEBPACK_IMPORTED_MODULE_2__["fetchCategory"])(name));
+      this.props.dispatch(Object(_actions__WEBPACK_IMPORTED_MODULE_2__["fetchCategory"])(name));
     }
   }, {
     key: "render",
