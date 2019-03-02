@@ -208,7 +208,19 @@ function (_React$Component) {
         className: "createfeke-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "feke-image",
+        src: "images/feke-blue.png"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "feke-image",
+        src: "images/feke-green.png"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "feke-image",
+        src: "images/feke-purple.png"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "feke-image",
+        src: "images/feke-red.png"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "name"
       }, "Name "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",

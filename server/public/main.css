@@ -19,23 +19,8 @@ body {
     margin: 20px;
 }
 
-<<<<<<< HEAD
-.create-page {
-  text-align: center;
-  margin: 20px; 
-  
-}
-
-.create-img {
-  height: 30%;
-  width: 30%;
-}
-
-||||||| merged common ancestors
-=======
 /* DASHBOARD CSS  */
 
->>>>>>> 4e3104a9b076c8f6ac8f2d4a1faff203708f83fd
 .dashboard-page {
     text-align: center;
 }

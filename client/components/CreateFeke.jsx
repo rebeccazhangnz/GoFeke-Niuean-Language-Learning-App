@@ -25,7 +25,10 @@ class CreateFeke extends React.Component {
     return (
       <div className='createfeke-page'>
         <form onSubmit={this.handleSubmit}>
-
+        <img className="feke-image" src = "images/feke-blue.png" />
+        <img className="feke-image" src = "images/feke-green.png" />
+        <img className="feke-image" src = "images/feke-purple.png" />
+        <img className="feke-image" src = "images/feke-red.png" />
           <label htmlFor="name">Name </label>
           <input type="text" name='name' value={this.state.name} onChange={this.handleChange} />
 
