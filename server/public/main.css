@@ -26,12 +26,13 @@ h1 {
     margin: 20px;
 }
 
-.homefooter {
-  background: url(images/footer.png);
-  background-size: 100%;
+/* HEADER CSS */ 
+
+.header {
+    text-align: left;
+    background: blueviolet;
+    color: white;
 }
-
-
 
 /* DASHBOARD CSS  */
 

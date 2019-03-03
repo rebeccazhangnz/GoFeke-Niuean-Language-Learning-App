@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
       <Link to = {`/category`}>
-        <h1>GO Feke!</h1>
+        <h1 className ="header">GO Feke!</h1>
       </Link>
     </div>
   )
