@@ -1,14 +1,7 @@
 import { updateFeke as updateFekeApi } from '../api/feke'
 import { getFeke } from '../api/feke'
-import {receiveFeke} from './getFeke'
+import {receiveFeke} from './getFekeStatus'
 
-
-function updateFeke(feke) {
-  return {
-    type: 'UPDATE_FEKE',
-    feke: feke
-  }
-}
 
 function isUpdated(){
     return {
@@ -18,11 +11,9 @@ function isUpdated(){
 
 export function createFeke(feke) {
   return function(dispatch) {
-    dispatch(updateFeke(feke))
-    dispatch(updateFekeApi(feke))
-    getFeke()
-    .then(feke => {
-      dispatch(receiveFeke(feke))
+    updateFekeApi(feke)
+    .then(newfeke => {
+      dispatch(receiveFeke(newfeke))
     })
     .then(dispatch(isUpdated()))
   }

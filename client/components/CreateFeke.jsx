@@ -45,7 +45,7 @@ class CreateFeke extends React.Component {
 
   render() {
     if (this.props.isUpdated) {
-      return <Redirect to="/" />
+      return <Redirect to="/fekestatus" />
     }
 
     return (
@@ -107,6 +107,8 @@ class CreateFeke extends React.Component {
   }
 }
 
-const mapStateToProps = ({ isUpdated }) => ({ isUpdated })
+const mapStateToProps = (state) => ({ 
+  isUpdated : state.isUpdated,
+ })
 
 export default connect(mapStateToProps)(CreateFeke)
