@@ -107,8 +107,8 @@ class CreateFeke extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({ 
-  isUpdated : state.isUpdated,
- })
+const mapStateToProps = state => ({
+  isUpdated: state.isUpdated
+})
 
 export default connect(mapStateToProps)(CreateFeke)
