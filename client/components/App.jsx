@@ -9,17 +9,21 @@ import Dashboard from './Dashboard'
 import CategoryList from './CategoryList'
 import Flashcard from './Flashcard'
 import FekeStatus from './FekeStatus'
+import Header from './Header'
 
 const App = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path='/welcome' component={Welcome} />
-      <Route exact path='/feke' component={CreateFeke} />
-      <Route exact path='/category' component={Dashboard} />
-      <Route path ='/category/:name' component={Flashcard}/>
-      {/* <Route exact path='/quiz' component={Quiz} />  */}
-    </Switch>
+    <React.Fragment>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path='/welcome' component={Welcome} />
+        <Route exact path='/feke' component={CreateFeke} />
+        <Route exact path='/category' component={Dashboard} />
+        <Route path ='/category/:name' component={Flashcard}/>
+        {/* <Route exact path='/quiz' component={Quiz} />  */}
+      </Switch>
+    </React.Fragment>
   )
 }
 
