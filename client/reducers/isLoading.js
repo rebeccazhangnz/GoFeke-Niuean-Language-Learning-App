@@ -9,7 +9,11 @@ function isLoading (state = initialState, action) {
     case 'REQUESTING_CATEGORY_LIST':
       return true
     case 'RECEIVE_CATEGORY_LIST':
-      return fasle
+      return false
+    case 'REQUESTING_FEKE':
+      return true
+    case 'RECEIVING_FEKE':
+      return false
     default:
       return state
   }

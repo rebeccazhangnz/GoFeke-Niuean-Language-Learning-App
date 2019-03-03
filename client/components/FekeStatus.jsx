@@ -9,7 +9,7 @@ class FekeStatus extends React.Component {
   render () {
     return (
       <div className = 'fekeStatus'>
-        <h1>This is the Feke Status Component</h1>
+        <h1>{this.props.isLoading && <span>isLoading...</span>}</h1>
         <div>{this.props.feke.map((feke) => {
           return (
 
