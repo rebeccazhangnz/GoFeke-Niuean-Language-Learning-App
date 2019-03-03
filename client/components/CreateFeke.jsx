@@ -14,13 +14,9 @@ class CreateFeke extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-
-
   handleSubmit = () => {
-    // this.setState({value: event.target.value});
     alert(this.state.village)
   }
-
 
   render() {
     return (

@@ -1,5 +1,4 @@
 import React from 'react'
-//import { Image, Container } from 'semantic-ui-react'
 import FekeStatus from './FekeStatus'
 import CategoryList from './CategoryList'
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {getFekeStatus} from '../actions/getFekeStatus'
+import { connect } from 'react-redux'
+import { getFekeStatus } from '../actions/getFekeStatus'
 import styled from 'styled-components'
 import Progressbar from './Progressbar'
 

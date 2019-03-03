@@ -380,7 +380,7 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "dashboard-btn ui purple button",
           key: list.name
-        }, "   ", list.name));
+        }, " ", list.name));
       }))));
     }
   }]);
@@ -446,7 +446,6 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(CreateFeke).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmit", function () {
-      // this.setState({value: event.target.value});
       alert(_this.state.village);
     });
 
@@ -569,7 +568,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
- //import { Image, Container } from 'semantic-ui-react'
 
 
 
@@ -788,8 +786,6 @@ function (_React$Component) {
           percentage: _this.state.percentage + 5
         });
       }
-
-      console.log('percentage', _this.state.percentage);
     });
 
     _this.state = {

@@ -35,7 +35,6 @@ class Flashcard extends React.Component{
                 percentage:this.state.percentage + 5
             }) 
         }
-        console.log('percentage', this.state.percentage)
     }
     render(){
         const {content} = this.props

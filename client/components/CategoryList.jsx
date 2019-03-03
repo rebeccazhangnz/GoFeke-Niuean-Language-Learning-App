@@ -1,8 +1,8 @@
 import React from 'react'
-import {Container} from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import {connect} from 'react-redux'
-import {fetchCategoryList} from '../actions'
+import { connect } from 'react-redux'
+import { fetchCategoryList } from '../actions'
 
 class CategoryList extends React.Component {
    
@@ -19,8 +19,8 @@ class CategoryList extends React.Component {
                         {this.props.categoryList && this.props.categoryList.map(list=>{
                             return (
                                 <Link to={`/category/${list.name}`}>
-                                    <button className="dashboard-btn ui purple button"  key={list.name} >   {list.name}
-                                    </button> 
+                                <button className="dashboard-btn ui purple button"  key={list.name} > {list.name}
+                                </button> 
                                 </Link>
                             )
                         })}  

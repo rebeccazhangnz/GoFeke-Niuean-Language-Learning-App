@@ -17,10 +17,8 @@ const App = () => {
       <Route exact path='/welcome' component={Welcome} />
       <Route exact path='/feke' component={CreateFeke} />
       <Route exact path='/category' component={Dashboard} />
-      {/* <Route exact path='/category' component={CategoryList} /> */}
       <Route path ='/category/:name' component={Flashcard}/>
-      {/* <Route exact path='/quiz/:category' component={Quiz} />  */}
-      {/* <Route exact path="/fekestatus" component={FekeStatus} /> */}
+      {/* <Route exact path='/quiz' component={Quiz} />  */}
     </Switch>
   )
 }
