@@ -4,6 +4,7 @@ import isLoading from './isLoading'
 import categoryList from './categoryList'
 import feke from './getFekeStatus'
 import percentage from './percentage'
+import isUpdated from './isUpdated'
 // import actions here
 
 export default combineReducers({
@@ -12,5 +13,6 @@ export default combineReducers({
   isLoading,
   categoryList,
   feke,
-  percentage
+  percentage,
+  isUpdated
 })
