@@ -1,12 +1,12 @@
 import {getFeke} from '../api/feke'
 
-function requestFeke () {
+export function requestFeke () {
   return {
     type: 'REQUESTING_FEKE'
   }
 }
 
-function receiveFeke (feke) {
+export function receiveFeke (feke) {
   return {
     type: 'RECEIVING_FEKE',
     feke: feke
@@ -23,7 +23,7 @@ export function getFekeStatus () {
   }
 }
 
-export function updatePercentage(percentage){
+export function updatePercentage (percentage) {
   return {
     type: 'UPDATE_PERCENTAGE',
     percentage: percentage

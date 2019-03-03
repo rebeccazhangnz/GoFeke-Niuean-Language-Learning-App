@@ -72,8 +72,6 @@ tags
 # Cypress video files
 tests/cypress/videos
 node_modules
-dev.sqlite3
-bundle.*
 bundle.js
 bundle.js.map
 yarn.lock
