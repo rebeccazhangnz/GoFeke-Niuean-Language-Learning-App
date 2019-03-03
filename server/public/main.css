@@ -30,9 +30,9 @@ h1 {
 
 .header {
     text-align: left;
-    background: transparent;
-    color: white;
-    margin: 15%; 
+    background: blueviolet; 
+    color: white; 
+    font-family: 'Bangers', cursive;
 }
 
 /* DASHBOARD CSS  */
