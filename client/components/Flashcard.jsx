@@ -1,13 +1,16 @@
 import React from 'react'
+import {connect}from 'react-redux'
+import FekeStatus from './FekeStatus'
 import { Link } from 'react-router-dom'
 import {fetchCategory} from '../actions'
-import {connect}from 'react-redux'
+import {updatePercentage}from '../actions/getFekeStatus'
 
 class Flashcard extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            index:0
+            index:0,
+            percentage:this.props.percentage
         }
     }
 
@@ -26,9 +29,11 @@ class Flashcard extends React.Component{
 
     handleNext =(e) =>{ 
         if(this.props.content.length && this.state.index+1<this.props.content.length){
+            this.props.dispatch(updatePercentage(this.state.percentage+1))
             this.setState({
-                index: this.state.index+1                
-            })
+                index: this.state.index+1,
+                percentage:this.state.percentage + 1
+            }) 
         }
     }
     render(){
@@ -38,10 +43,11 @@ class Flashcard extends React.Component{
 
         return (   
             <div>
-               {niueanWords[this.state.index]} means {englishWords[this.state.index]}<br/>
-               <button key='previous' onClick={this.handlePrevious}>previous</button>
-                <button key='next' onClick={this.handleNext}>next</button><br/>
-                <button key='homebtn'><Link to='/category'>Home</Link></button>
+               <FekeStatus />
+               <h1>{niueanWords[this.state.index]} means {englishWords[this.state.index]}</h1><br/>
+               <button className="ui purple button" key='previous' onClick={this.handlePrevious}>previous</button>
+                <button className="ui purple button" key='next' onClick={this.handleNext}>next</button>
+                <Link to='/category'><button className="ui purple button" key='homebtn'>Home</button></Link>
             </div>
            
         )
@@ -49,7 +55,8 @@ class Flashcard extends React.Component{
 }
 function mapStateToProps(state){
     return {
-        content: state.content
+        content: state.content,
+        percentage:state.percentage
     }
 }
 export default connect (mapStateToProps)(Flashcard)

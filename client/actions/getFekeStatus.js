@@ -22,3 +22,10 @@ export function getFekeStatus () {
       })
   }
 }
+
+export function updatePercentage(percentage){
+  return {
+    type: 'UPDATE_PERCENTAGE',
+    percentage: percentage
+  }
+}
