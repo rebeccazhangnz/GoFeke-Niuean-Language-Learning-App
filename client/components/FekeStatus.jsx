@@ -1,33 +1,56 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {getFekeStatus} from '../actions/getFekeStatus'
+import { connect } from 'react-redux'
+import { getFekeStatus } from '../actions/getFekeStatus'
+import styled from 'styled-components'
+import Progressbar from './Progressbar'
+
+const AppWrapper = styled.div`
+  display:flex;
+  justify-content: center;
+`
+
+const ProgressbarContainer = styled.div`
+  width: 250px;
+  margin-top: 10px;
+`
 
 class FekeStatus extends React.Component {
+  constructor(props){
+    super(props)
+    this.state ={
+      percentage: this.props.percentage
+    }
+  }
   componentDidMount () {
     this.props.dispatch(getFekeStatus())
   }
   render () {
     return (
       <div className = 'fekeStatus'>
-        <h1>This is the Feke Status Component</h1>
-        <div>{this.props.feke.map((feke) => {
-          return (
-
-            <div key = {feke.name}>
-              <img src = {`/images/${feke.image}`} />
-              <h1>{feke.name}</h1>
-              <h1>{feke.village}</h1>
-            </div>
-          )
-        })}</div>
-      </div>
+        <div>
+          {this.props.feke.map(feke => {
+            return (
+              <div key = {feke.name}>
+                <img className='feke-image' src = {`/images/${feke.image}`}/>
+                 {feke.name} from village {feke.village}
+              </div>
+            )})
+          }
+        </div>
+        <AppWrapper>
+          <ProgressbarContainer>
+            <Progressbar />
+          </ProgressbarContainer>
+        </AppWrapper>
+      </div>  
     )
   }
 }
 
 function mapStateToProps (state) {
   return {
-    feke: state.feke
+    feke: state.feke,
+    percentage:state.percentage
   }
 }
 

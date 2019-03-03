@@ -3,6 +3,7 @@ import content from './content'
 import isLoading from './isLoading'
 import categoryList from './categoryList'
 import feke from './getFekeStatus'
+import percentage from './percentage'
 // import actions here
 
 export default combineReducers({
@@ -10,6 +11,6 @@ export default combineReducers({
   content,
   isLoading,
   categoryList,
-  feke
-
+  feke,
+  percentage
 })

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class CreateFeke extends React.Component {
   constructor(props) {
@@ -13,13 +14,9 @@ class CreateFeke extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-
-
   handleSubmit = () => {
-    // this.setState({value: event.target.value});
     alert(this.state.village)
   }
-
 
   render() {
     return (
@@ -48,7 +45,7 @@ class CreateFeke extends React.Component {
           <option village="tuapa">Tuapa</option>
           <option village="vaiea">Vaiea</option>
           </select>
-          <input type="submit" value="Create feke" />
+          <Link to ='./category'><input type="submit" value="Create feke" /></Link>
         </form>
       </div>
     )
