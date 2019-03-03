@@ -297,7 +297,7 @@ var App = function App() {
     component: _CreateFeke__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/dashboard",
+    path: "/category",
     component: _Dashboard__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/category/:name",
@@ -523,7 +523,7 @@ function (_React$Component) {
       }, "Tuapa"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         village: "vaiea"
       }, "Vaiea")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "./dashboard"
+        to: "./category"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "Create feke"
@@ -789,7 +789,7 @@ function (_React$Component) {
         });
       }
 
-      console.log('percentage', _this.state.percentage); //this.props.dispatch(updatePercentage(this.state.percentage))
+      console.log('percentage', _this.state.percentage);
     });
 
     _this.state = {
@@ -824,7 +824,7 @@ function (_React$Component) {
         key: "next",
         onClick: this.handleNext
       }, "next"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        to: "/dashboard"
+        to: "/category"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "ui purple button",
         key: "homebtn"

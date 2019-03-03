@@ -36,7 +36,6 @@ class Flashcard extends React.Component{
             }) 
         }
         console.log('percentage', this.state.percentage)
-        //this.props.dispatch(updatePercentage(this.state.percentage))
     }
     render(){
         const {content} = this.props
@@ -49,7 +48,7 @@ class Flashcard extends React.Component{
                <h1>{niueanWords[this.state.index]} means {englishWords[this.state.index]}</h1><br/>
                <button className="ui purple button" key='previous' onClick={this.handlePrevious}>previous</button>
                 <button className="ui purple button" key='next' onClick={this.handleNext}>next</button>
-                <Link to='/dashboard'><button className="ui purple button" key='homebtn'>Home</button></Link>
+                <Link to='/category'><button className="ui purple button" key='homebtn'>Home</button></Link>
             </div>
            
         )

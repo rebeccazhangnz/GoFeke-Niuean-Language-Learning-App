@@ -49,7 +49,7 @@ class CreateFeke extends React.Component {
           <option village="tuapa">Tuapa</option>
           <option village="vaiea">Vaiea</option>
           </select>
-          <Link to ='./dashboard'><input type="submit" value="Create feke" /></Link>
+          <Link to ='./category'><input type="submit" value="Create feke" /></Link>
         </form>
       </div>
     )
