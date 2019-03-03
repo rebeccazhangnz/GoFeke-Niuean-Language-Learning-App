@@ -471,28 +471,32 @@ function (_React$Component) {
         className: "createfeke-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "createfeke-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "feke-image",
+        className: "createfeke-image",
         src: "images/feke-blue.png"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "feke-image",
+        className: "createfeke-image",
         src: "images/feke-green.png"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "feke-image",
+        className: "createfeke-image",
         src: "images/feke-purple.png"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "feke-image",
+        className: "createfeke-image",
         src: "images/feke-red.png"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "createfeke-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "name"
-      }, "Name "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "name",
         value: this.state.name,
         onChange: this.handleChange
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "village"
-      }, "Village "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, "Village"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         village: this.state.village,
         onChange: this.handleChange
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
@@ -526,7 +530,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "Create feke"
-      }))));
+      })))));
     }
   }]);
 
