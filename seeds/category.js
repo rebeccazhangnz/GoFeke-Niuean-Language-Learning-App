@@ -4,12 +4,12 @@ exports.seed = function (knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('category').insert([
-        {id: 1, name: 'family'},
-        {id: 2, name: 'food'},
-        {id: 3, name: 'greetings'},
-        {id: 4, name: 'numbers'}
-        {id: 5, name: 'time'},
-        {id: 6, name: 'body'}
+        { id: 1, name: 'family' },
+        { id: 2, name: 'food' },
+        { id: 3, name: 'greetings' },
+        { id: 4, name: 'numbers' },
+        { id: 5, name: 'time' },
+        { id: 6, name: 'body' }
       ])
     })
 }
