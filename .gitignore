@@ -1,9 +1,3 @@
-node_modules
-bundle.js
-budle.js.map
-yarn.lock
-
-
 # Logs
 logs
 *.log
@@ -61,7 +55,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.env 
 
 # next.js build output
 .next
@@ -77,5 +71,9 @@ tags
 
 # Cypress video files
 tests/cypress/videos
+node_modules
+bundle.js
+bundle.js.map
+yarn.lock
 server/public/bundle.js
-server/public/bundle.js
+server/public/bundle.js.map
