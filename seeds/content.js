@@ -72,7 +72,6 @@ exports.seed = function (knex, Promise) {
         { id: 66, category_id: 4, english: 'Eighteen', Niuean: 'Hogofulu ma valu' },
         { id: 67, category_id: 4, english: 'Nineteen', Niuean: 'Hogofulu ma hiva' },
         { id: 68, category_id: 4, english: 'Twenty', Niuean: 'Ua Hogofulu' },
-
         { id: 69, category_id: 5, english: 'Monday', Niuean: 'Aho gofua' },
         { id: 70, category_id: 5, english: 'Tuesday', Niuean: 'Aho ua' },
         { id: 71, category_id: 5, english: 'Wednesday', Niuean: 'Aho lotu' },
@@ -92,6 +91,24 @@ exports.seed = function (knex, Promise) {
         { id: 85, category_id: 5, english: 'October', Niuean: 'Oketopa' },
         { id: 86, category_id: 5, english: 'November', Niuean: 'Novema' },
         { id: 87, category_id: 5, english: 'December', Niuean: 'Tesemo' },
+        { id: 88, category_id: 6, english: 'Mouth', Niuean: 'Gutu' },
+        { id: 89, category_id: 6, english: 'Nose', Niuean: 'Ihu' },
+        { id: 90, category_id: 6, english: 'Eye', Niuean: 'Mata' },
+        { id: 91, category_id: 6, english: 'Toe', Niuean: 'Matahui' },
+        { id: 92, category_id: 6, english: 'Knee', Niuean: 'Matatuli' },
+        { id: 93, category_id: 6, english: 'Ear', Niuean: 'Teliga' },
+        { id: 94, category_id: 6, english: 'Shoulder', Niuean: 'Tukeua' },
+        { id: 95, category_id: 6, english: 'Head', Niuean: 'Ulu' },
+        { id: 96, category_id: 6, english: 'Arm/Hand', Niuean: 'Lima' },
+        { id: 97, category_id: 6, english: 'Thirsty', Niuean: 'Fia inu' },
+        { id: 98, category_id: 6, english: 'Hungry', Niuean: 'Hoge' },
+        { id: 99, category_id: 6, english: 'Hot/Warm', Niuean: 'Mafana' },
+        { id: 100, category_id: 6, english: 'Excited', Niuean: 'Mainiini' },
+        { id: 101, category_id: 6, english: 'Tired', Niuean: 'Mategugu' },
+        { id: 102, category_id: 6, english: 'Starving', Niuean: 'Matehoge' },
+        { id: 103, category_id: 6, english: 'Sad/Cold', Niuean: 'momoko' },
+        { id: 104, category_id: 6, english: 'Sick', Niuean: 'tatalu' },
+        { id: 105, category_id: 6, english: 'Down/Worried', Niuean: 'tupetupe' }
 
       ])
     })
