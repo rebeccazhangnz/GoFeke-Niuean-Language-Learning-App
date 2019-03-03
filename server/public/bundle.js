@@ -779,11 +779,11 @@ function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "handleNext", function (e) {
       if (_this.props.content.length && _this.state.index + 1 < _this.props.content.length) {
-        _this.props.dispatch(Object(_actions_getFekeStatus__WEBPACK_IMPORTED_MODULE_5__["updatePercentage"])(_this.state.percentage + 5));
+        _this.props.dispatch(Object(_actions_getFekeStatus__WEBPACK_IMPORTED_MODULE_5__["updatePercentage"])(_this.state.percentage + 1));
 
         _this.setState({
           index: _this.state.index + 1,
-          percentage: _this.state.percentage + 5
+          percentage: _this.state.percentage + 1
         });
       }
     });
@@ -1142,7 +1142,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function render() {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
     store: store
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App__WEBPACK_IMPORTED_MODULE_6__["default"], null)), ","), document.getElementById('root'));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App__WEBPACK_IMPORTED_MODULE_6__["default"], null))), document.getElementById('root'));
 }
 
 /***/ }),

@@ -29,10 +29,10 @@ class Flashcard extends React.Component{
 
     handleNext =(e) =>{ 
         if(this.props.content.length && this.state.index+1<this.props.content.length){
-            this.props.dispatch(updatePercentage(this.state.percentage+5))
+            this.props.dispatch(updatePercentage(this.state.percentage+1))
             this.setState({
                 index: this.state.index+1,
-                percentage:this.state.percentage + 5
+                percentage:this.state.percentage + 1
             }) 
         }
     }
