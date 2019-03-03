@@ -8,6 +8,8 @@ exports.seed = function (knex, Promise) {
         {id: 2, name: 'food'},
         {id: 3, name: 'greetings'},
         {id: 4, name: 'numbers'}
+        {id: 5, name: 'time'},
+        {id: 6, name: 'body'}
       ])
     })
 }
