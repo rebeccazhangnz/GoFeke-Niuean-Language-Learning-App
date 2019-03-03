@@ -781,15 +781,15 @@ function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "handleNext", function (e) {
       if (_this.props.content.length && _this.state.index + 1 < _this.props.content.length) {
+        _this.props.dispatch(Object(_actions_getFekeStatus__WEBPACK_IMPORTED_MODULE_5__["updatePercentage"])(_this.state.percentage + 5));
+
         _this.setState({
           index: _this.state.index + 1,
-          percentage: _this.state.percentage + 10
+          percentage: _this.state.percentage + 5
         });
       }
 
-      console.log('percentage', _this.state.percentage);
-
-      _this.props.dispatch(Object(_actions_getFekeStatus__WEBPACK_IMPORTED_MODULE_5__["updatePercentage"])(_this.state.percentage));
+      console.log('percentage', _this.state.percentage); //this.props.dispatch(updatePercentage(this.state.percentage))
     });
 
     _this.state = {
@@ -1095,7 +1095,7 @@ var Welcome = function Welcome() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Container"], {
     textAlign: "justified",
     centered: "true"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Divider"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "welcome-p"
   }, "Welcome to the feke family! You're about to begin a vagahau Niue journey with help from your feke. Touch any Niuean word to see it's translation."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/feke"
