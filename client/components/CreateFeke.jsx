@@ -45,7 +45,7 @@ class CreateFeke extends React.Component {
 
   render() {
     if (this.props.isUpdated) {
-      return <Redirect to="/fekestatus" />
+      return <Redirect to= '/category'/>
     }
 
     return (
@@ -100,7 +100,7 @@ class CreateFeke extends React.Component {
             <option village="tuapa">Tuapa</option>
             <option village="vaiea">Vaiea</option>
           </select>
-          <Link to ='./category'><input type="submit" value="Create feke" /></Link>
+           <input type="submit" value="Create feke" />
         </form>
       </div>
     )
