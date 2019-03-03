@@ -6,6 +6,10 @@ function isLoading (state = initialState, action) {
       return true
     case 'RECEIVING_CONTENT' :
       return false
+    case 'REQUESTING_CATEGORY_LIST':
+      return true
+    case 'RECEIVE_CATEGORY_LIST':
+      return fasle
     default:
       return state
   }

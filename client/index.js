@@ -15,7 +15,7 @@ let store = createStore(reducers, compose(
 
 document.addEventListener('DOMContentLoaded', () => {
   render()
-  // store.subscribe(render)
+     store.subscribe(render)
 })
 
 function render () {
@@ -23,7 +23,7 @@ function render () {
     <Provider store={store}>
       <Router>
         <App />
-      </Router>,
+      </Router>
     </Provider>,
     document.getElementById('root')
   )
