@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class CreateFeke extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class CreateFeke extends React.Component {
           <option village="tuapa">Tuapa</option>
           <option village="vaiea">Vaiea</option>
           </select>
-          <input type="submit" value="Create feke" />
+          <Link to ='./dashboard'><input type="submit" value="Create feke" /></Link>
         </form>
       </div>
     )

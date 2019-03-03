@@ -6,7 +6,10 @@ body {
     background-position: center bottom, bottom;
     background-size: 100%;
 }
-
+h1 {
+    text-align: center;
+    color: purple
+}
 /* HOME PAGE CSS */
 
 .home-page {
@@ -59,16 +62,19 @@ body {
 
 .button {
     margin: 10em;
-    height: 150px;
+    height: 50px;
     width: 150px;
+    background-Color: purple;
 }
 
 .fekeStatus {
-    margin: auto;
+    margin: 30px;
     border-style: solid;
+    border-radius: 15px;
+    border-color: blueviolet;
     text-align: center;
     width: 75vw;
-    height: 200px;
+    height: 150px;
     display: grid;
     grid-template-columns: 0.25fr 1fr;
     grid-template-rows: 0.25fr;
@@ -77,8 +83,8 @@ body {
 
 .feke-image {
     float: left;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .feke-details-container {

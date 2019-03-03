@@ -10,7 +10,7 @@ const AppWrapper = styled.div`
 `
 
 const ProgressbarContainer = styled.div`
-  width: 300px;
+  width: 250px;
   margin-top: 10px;
 `
 
@@ -18,7 +18,7 @@ class FekeStatus extends React.Component {
   constructor(props){
     super(props)
     this.state ={
-      percentage: 5
+      percentage: this.props.percentage
     }
   }
   componentDidMount () {
@@ -31,9 +31,8 @@ class FekeStatus extends React.Component {
           {this.props.feke.map(feke => {
             return (
               <div key = {feke.name}>
-                <img style={{width:100,height:100}} src = {`/images/${feke.image}`}/>
-                <h1>{feke.name}
-                {' '}{feke.village}</h1>
+                <img className='feke-image' src = {`/images/${feke.image}`}/>
+                 {feke.name} from village {feke.village}
               </div>
             )})
           }
@@ -50,7 +49,8 @@ class FekeStatus extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    feke: state.feke
+    feke: state.feke,
+    percentage:state.percentage
   }
 }
 

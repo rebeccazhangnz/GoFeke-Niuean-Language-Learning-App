@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 import Home from './Home'
 import Welcome from './Welcome'
 import CreateFeke from './CreateFeke'
+import Dashboard from './Dashboard'
 // import Quiz from './Quiz'
 import CategoryList from './CategoryList'
 import Flashcard from './Flashcard'
@@ -15,10 +16,11 @@ const App = () => {
       <Route exact path="/" component={Home} />
       <Route exact path='/welcome' component={Welcome} />
       <Route exact path='/feke' component={CreateFeke} />
-      <Route exact path='/category' component={CategoryList} />
+      <Route exact path='/dashboard' component={Dashboard} />
+      {/* <Route exact path='/category' component={CategoryList} /> */}
       <Route path ='/category/:name' component={Flashcard}/>
       {/* <Route exact path='/quiz/:category' component={Quiz} />  */}
-      <Route exact path="/fekestatus" component={FekeStatus} />
+      {/* <Route exact path="/fekestatus" component={FekeStatus} /> */}
     </Switch>
   )
 }

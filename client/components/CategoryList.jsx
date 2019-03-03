@@ -1,43 +1,36 @@
 import React from 'react'
-import { Image } from 'semantic-ui-react'
+import {Container} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {fetchCategoryList} from '../actions'
 
 class CategoryList extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            name: 'Micah',
-            village: 'Hakupu'
-        }
-    }
+   
     componentDidMount(){
         this.props.dispatch(fetchCategoryList())
     }
-
+    
     render() {
         return (
-            <div className='dashboard-page'>
-                <div className='dashboard-feke'>
-                    <Image src='/images/feke-green.png' size="medium" centered />
-                    <h1>Name: <span>{this.state.name}</span></h1>
-                    <h1>Village: <span>{this.state.village}</span></h1>
+            <Container textAlign='justified' centered="true" >
+                <div className='dashboard-container'>
+                    <div className='dashboard-btn'>
+                        {this.props.isLoading && <span>isLoading...</span>}
+                        {this.props.categoryList && this.props.categoryList.map(list=>{
+                            return (
+                                <Link to={`/category/${list.name}`}>
+                                    <button className="dashboard-btn ui purple button"  key={list.name} >   {list.name}
+                                    </button> 
+                                </Link>
+                            )
+                        })}  
+                    </div>          
                 </div>
-                <div className='dashboard-category'>
-                    {this.props.isLoading && <span>isLoading...</span>}
-                    {this.props.categoryList && this.props.categoryList.map(list=>{
-                        return (
-                            <h1 key={list.name}><Link to={`/category/${list.name}`}>{list.name}</Link></h1>
-                        )
-                    })}  
-                </div>          
-            </div>
+            </Container>
         )
     }
 }
 function mapStateToProps(state){
-    //console.log(state.CategoryList)
     return {
         categoryList: state.categoryList
     }
