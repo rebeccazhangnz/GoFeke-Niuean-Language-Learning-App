@@ -33,3 +33,24 @@ test('category/getCategoryList returns category names ', () => {
     })
     .catch(err => expect(err).toBeNull())
 })
+
+
+test('category/getCategoryIdByName returns corresponding category id ', () => {
+  const expected = 3
+  return dbCategory.getCategoryIdByName('greetings', testDb)
+    .then(Category => {
+      const actual = Category[0].id
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
+})
+
+test('category/getCategoryIdByName returns id', () => {
+  const expected = 1
+  return dbCategory.getCategoryIdByName('family', testDb)
+    .then(content => {
+      const actual = content.length
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
+})
