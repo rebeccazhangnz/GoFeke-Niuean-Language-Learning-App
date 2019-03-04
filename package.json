@@ -13,7 +13,7 @@
     "server": "nodemon server --ignore server/public",
     "knex": "knex --knexfile ./knexfile.js",
     "updateDb": "rm -f dev.sqlite3 && yarn knex migrate:latest && yarn knex seed:run",
-    "test": "jest --watchAll --testPathIgnorePatterns tests/cypress",
+    "test": "jest",
     "e2e": "nodemon server --ignore server/public & webpack --watch & cypress open"
   },
   "babel": {
@@ -24,11 +24,6 @@
     "plugins": [
       "@babel/plugin-proposal-class-properties",
       "@babel/plugin-proposal-object-rest-spread"
-    ]
-  },
-  "jest": {
-    "setupFiles": [
-      "./tests/setup.js"
     ]
   },
   "dependencies": {
