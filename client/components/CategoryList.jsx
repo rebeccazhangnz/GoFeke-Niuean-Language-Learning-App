@@ -12,6 +12,7 @@ class CategoryList extends React.Component {
   render () {
     return (
       <Container textAlign='justified' centered="true" >
+            <h2>Select a category to learn</h2> 
         <div className='dashboard-container'>
           <div className='dashboard-btn'>
             {this.props.isLoading && <span>isLoading...</span>}

@@ -58,6 +58,7 @@ class CreateFeke extends React.Component {
     }
     return (
       <div className="createfeke-page">
+      <h2>Mitaki! Select and name your feke</h2>
         <form onSubmit={this.handleSubmit}>
           <div className='createfeke-container'>
             <img
@@ -110,7 +111,7 @@ class CreateFeke extends React.Component {
               <option village="tuapa">Tuapa</option>
               <option village="vaiea">Vaiea</option>
             </select>
-            <input className="createfeke-submit ui purple button" type="submit" value="Create feke" />
+            <input className="createfeke-submit ui purple button" type="submit" value="GO! FEKE" />
           </div>
         </form>
       </div>
