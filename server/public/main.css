@@ -78,17 +78,26 @@ button {
     margin-right: 5em;
     margin-bottom: 5em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    grid-template-areas: ". . ." ". . ." ". . ." "quiz quiz quiz";
     justify-items: stretch;
     align-items: stretch;
 }
+
 
 .dashboard-btn {
     flex: 1;
     display: flex;
     justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+.dashboard-btn.ui.purple.button {
+    height: 100px;
+    font-size: 2em;
 }
 
 .button {
