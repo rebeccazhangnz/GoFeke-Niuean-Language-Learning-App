@@ -33,7 +33,7 @@ class Progressbar extends React.Component {
         )
     }
 }
-Progressbar.PropTypes={
+Progressbar.propTypes={
     percentage: PropTypes.number
 }
 
