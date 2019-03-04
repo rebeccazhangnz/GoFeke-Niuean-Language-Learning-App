@@ -3,17 +3,23 @@ body {
     font-family: 'Libre Fran', sans-serif;
     background-image: url(images/leaves.png), url(images/footerwaves.png);
     background-repeat: no-repeat; 
-    background-position: center bottom, bottom;
+    background-position: bottom, bottom;
     background-size: 100%;
 }
 h1 {
     text-align: center;
-    color: purple
+    color: rgb(88, 88, 218);
 }
 /* HOME PAGE CSS */
 
 .home-page {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .home-btn {
@@ -26,12 +32,25 @@ h1 {
     margin: 20px;
 }
 
-.homefooter {
-  background: url(images/footer.png);
-  background-size: 100%;
+/* HEADER CSS */ 
+
+.header {
+    overflow: hidden; 
+    /* background: blueviolet;  */
+    font-family: 'Bangers', cursive;
+    padding: 5px 5px; 
+    color: whitesmoke;
 }
 
-
+.header a {
+    float: left; 
+    text-align: center; 
+    padding: 10px; 
+    text-decoration: none;
+    font-size: 20px; 
+    line-height: 25px; 
+    border-radius: 4px; 
+}
 
 /* DASHBOARD CSS  */
 
@@ -65,6 +84,7 @@ h1 {
     height: 50px;
     width: 150px;
     background-Color: purple;
+    font-size: 20px;
 }
 
 .fekeStatus {
