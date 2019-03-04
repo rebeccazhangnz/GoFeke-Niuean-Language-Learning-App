@@ -16,6 +16,10 @@ router.get('/', (req, res) => {
 
 router.put('/', (req, res) => {
   db.updateFeke(req.body)
+    .then(()=> db.getFeke())
+    .then(feke => {
+      res.json(feke)
+    })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })

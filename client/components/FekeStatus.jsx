@@ -1,6 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { getFekeStatus } from '../actions/getFekeStatus'
+import {connect} from 'react-redux'
+import {getFekeStatus} from '../actions/getFekeStatus'
+import {resetUpdate} from '../actions/createFeke'
 import styled from 'styled-components'
 import Progressbar from './Progressbar'
 
@@ -15,14 +16,15 @@ const ProgressbarContainer = styled.div`
 `
 
 class FekeStatus extends React.Component {
-  constructor(props){
+  constructor (props) {
     super(props)
-    this.state ={
+    this.state = {
       percentage: this.props.percentage
     }
   }
   componentDidMount () {
     this.props.dispatch(getFekeStatus())
+    this.props.dispatch(resetUpdate())
   }
   render () {
     return (
@@ -32,9 +34,10 @@ class FekeStatus extends React.Component {
             return (
               <div key = {feke.name}>
                 <img className='feke-image' src = {`/images/${feke.image}`}/>
-                 {feke.name} from village {feke.village}
+                {feke.name} from village {feke.village}
               </div>
-            )})
+            )
+          })
           }
         </div>
         <AppWrapper>
@@ -42,7 +45,7 @@ class FekeStatus extends React.Component {
             <Progressbar />
           </ProgressbarContainer>
         </AppWrapper>
-      </div>  
+      </div>
     )
   }
 }
@@ -50,7 +53,7 @@ class FekeStatus extends React.Component {
 function mapStateToProps (state) {
   return {
     feke: state.feke,
-    percentage:state.percentage
+    percentage: state.percentage
   }
 }
 
