@@ -8,6 +8,7 @@ class Quiz extends React.Component {
         this.state={
             index:0,
             score:0,
+            scoreUpdated:false,
             checked: false,
             submitted:false,
             selectedOption:''
@@ -26,33 +27,36 @@ class Quiz extends React.Component {
     }
     checkAnswerSelected=()=>{
         if(!this.state.checked){
-            alert('please choose your answer first, then press submit button')
+            return alert('please choose your answer first, then press submit button')
         } 
     }
 
     checkAnswerSubmitted=()=>{
         if(!this.state.submitted){
-            alert('please submit your answer first, then press next button')
+            return alert('please submit your answer first, then press next button')
         }
     }
     handleSubmit=(e)=>{
         e.preventDefault()
         this.checkAnswerSelected()
         const allAnswers = this.props.questions.map(question =>question.answer)
-        if(this.state.selectedOption === allAnswers[this.state.index] ){
-            console.log('answer',allAnswers[this.state.index])
+        if(!this.state.scoreUpdated && this.state.checked && this.state.selectedOption === allAnswers[this.state.index] ){
             this.setState({
-                score: this.state.score+10,
-                submitted: true
+                score: this.state.score+5,
+                submitted: true,
+                scoreUpdated:true
             })
-         }
-         else{
-            alert('wrong answer :(')
+        }
+        else if (this.state.scoreUpdated){
+            alert('you have submitted your answer!')
+        }
+        else if (this.state.checked) {
+            alert('wrong answer')
              this.setState({
                  submitted:true
              })
-             console.log('wrong answer')
-         }
+        }
+
     }
 
     handleNext =(e) =>{ 
@@ -62,7 +66,8 @@ class Quiz extends React.Component {
             this.setState({
                 index: this.state.index+1,
                 checked:false,
-                submitted:false
+                submitted:false,
+                scoreUpdated:false
             }) 
         }
     }
