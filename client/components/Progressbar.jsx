@@ -25,7 +25,7 @@ class Progressbar extends React.Component {
     render (){
         return (
             <div>
-                <h3>Your study progress with your feke:</h3>
+                <h4>Study progress with your feke:</h4>
                 <Track>
                     <Thumb percentage={this.clamp(0,this.props.percentage,100)} />
                 </Track>

@@ -10,6 +10,15 @@ h1 {
     text-align: center;
     color: rgb(88, 88, 218);
 }
+
+h2 {
+  text-align: center; 
+}
+
+button {
+  text-align: center;
+}
+
 /* HOME PAGE CSS */
 
 .home-page {
