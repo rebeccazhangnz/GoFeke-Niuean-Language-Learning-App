@@ -4,7 +4,7 @@ exports.seed = function (knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('content').insert([
-        { id: 1, category_id: 1, english: 'baby', Niuean: 'tama Muke / mukemuke' },
+        { id: 1, category_id: 1, english: 'baby', Niuean: 'tama muke / mukemuke' },
         { id: 2, category_id: 1, english: 'child', Niuean: 'tama' },
         { id: 3, category_id: 1, english: 'sibling / cousin', Niuean: 'lafu' },
         { id: 4, category_id: 1, english: 'younger sibling', Niuean: 'tehina' },
