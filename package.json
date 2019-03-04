@@ -16,6 +16,11 @@
     "test": "jest --watchAll",
     "e2e": "concurrently \"nodemon server --ignore server/public\" \"webpack --watch & cypress open\""
   },
+  "jest": {
+    "setupFiles": [
+      "./tests/setup-enzyme-env.js"
+    ]
+  },
   "babel": {
     "presets": [
       "@babel/preset-env",
