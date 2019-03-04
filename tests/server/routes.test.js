@@ -10,7 +10,7 @@ test('Test PUT route "/api/v1/feke" ', done => {
     .put('/api/v1/feke')
     .send({
       id: 1,
-      category_id: '1',
+      category_id: 1,
       name: 'dfads',
       village: 'Avatele',
       image: 'feke-red.png',
