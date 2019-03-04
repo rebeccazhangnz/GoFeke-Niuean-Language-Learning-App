@@ -44,19 +44,26 @@ class Flashcard extends React.Component{
         return (   
             <div>
                <FekeStatus />
-               <div className="three column centered grid">
-               <div className="column">
+<div className="ui centered grid">
+<div className="eight wide column centered">
+               <div class="flip-box">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
                <h1>{niueanWords[this.state.index]}</h1> 
-               <h2>{englishWords[this.state.index]}</h2>
                </div>
-               <div className="column">
+               <div class="flip-box-back">
+               <h1>{englishWords[this.state.index]}</h1>
+               </div>
+               </div>
+               </div>
+
                <button className="ui purple button" key='previous' onClick={this.handlePrevious}>Previous</button>
                 <button className="ui purple button" key='next' onClick={this.handleNext}>Next</button>
                 <Link to='/category'><button className="ui purple button" key='homebtn'>Home</button></Link>
                 </div>
                 </div>
-            </div>
-           
+</div>
+                
         )
     }
 }
