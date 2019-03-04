@@ -21,7 +21,7 @@ test('Test PUT route "/api/v1/feke" ', done => {
     .then(res => {
       expect(res.body).toEqual([{
         id: 1,
-        category_id: '1',
+        category_id: 1,
         name: 'dfads',
         village: 'Avatele',
         image: 'feke-red.png',
