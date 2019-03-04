@@ -12,7 +12,7 @@ class CategoryList extends React.Component {
   render() {
     return (
       <Container textAlign='justified' centered="true" >
-        <h2>Select a category to learn</h2>
+        {/* <h2>Select a category to learn</h2> */}
         <div className='dashboard-container'>
           {this.props.isLoading && <span>isLoading...</span>}
           {this.props.categoryList && this.props.categoryList.map(list => {

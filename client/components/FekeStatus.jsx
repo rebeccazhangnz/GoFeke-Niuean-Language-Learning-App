@@ -1,7 +1,7 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {getFekeStatus} from '../actions/getFekeStatus'
-import {resetUpdate} from '../actions/createFeke'
+import React, { Fragment } from 'react'
+import { connect } from 'react-redux'
+import { getFekeStatus } from '../actions/getFekeStatus'
+import { resetUpdate } from '../actions/createFeke'
 import styled from 'styled-components'
 import Progressbar from './Progressbar'
 
@@ -16,41 +16,47 @@ const ProgressbarContainer = styled.div`
 `
 
 class FekeStatus extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       percentage: this.props.percentage
     }
   }
-  componentDidMount () {
+  componentDidMount() {
     this.props.dispatch(getFekeStatus())
     this.props.dispatch(resetUpdate())
   }
-  render () {
+  //                   
+  render() {
     return (
-      <div className = 'fekeStatus'>
-        <div>
-          {this.props.feke.map(feke => {
-            return (
-              <div key = {feke.name}>
-                <img className='feke-image' src = {`/images/${feke.image}`}/>
-                {feke.name} from {feke.village}
-              </div>
-            )
-          })
-          }
+      <Fragment >
+        <div className='feke-container'>
+          <div className="feke">
+            {this.props.feke.map(feke => {
+              return (
+                <Fragment>
+                  <div className="feke-image-container" key={feke.name}>
+                    <img className='feke-image' src={`/images/${feke.image}`} />
+                    <h1>{feke.name} from {feke.village}</h1>
+                  </div>
+                </Fragment>
+              )
+            })
+            }
+          </div>
+
         </div>
         <AppWrapper>
           <ProgressbarContainer>
             <Progressbar />
           </ProgressbarContainer>
         </AppWrapper>
-      </div>
+      </Fragment>
     )
   }
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     feke: state.feke,
     percentage: state.percentage
