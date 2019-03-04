@@ -8,16 +8,31 @@ body {
 }
 h1 {
     text-align: center;
-    color: purple;
+    color: rgb(88, 88, 218);
 }
 
 .radio{
     align-self: center
 }
+
+h2 {
+  text-align: center; 
+}
+
+button {
+  text-align: center;
+}
+
 /* HOME PAGE CSS */
 
 .home-page {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .home-btn {
@@ -34,10 +49,9 @@ h1 {
 
 .header {
     overflow: hidden; 
-    /* background: blueviolet;  */
     font-family: 'Bangers', cursive;
-    padding: 5px 5px; 
-    color: rgb(138, 43, 226);
+    padding: 5px 10px; 
+    color: whitesmoke;
 }
 
 .header a {
@@ -45,7 +59,7 @@ h1 {
     text-align: center; 
     padding: 10px; 
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 30px; 
     line-height: 25px; 
     border-radius: 4px; 
 }
@@ -82,6 +96,7 @@ h1 {
     height: 50px;
     width: 150px;
     background-Color: purple;
+    font-size: 20px;
 }
 
 .fekeStatus {
@@ -144,9 +159,10 @@ h1 {
     margin-right: auto ;
     display: grid;
     width: 300px;
-    grid-template-rows: 150px 150px;
+    grid-template-rows: auto auto;
     grid-template-columns: 150px 150px;
-    
+    grid-row-gap: 20px;
+    grid-template-areas: ". ." ". ." "submit submit";
 }
 
 .createfeke-form {
@@ -166,18 +182,37 @@ h1 {
     height: 150px;
 }
 
+.createfeke-select {
+    height: 80%;
+}
+
+.createfeke-submit {
+    width: 100%;
+    grid-area: submit !important;
+}
+
+.selected {
+    border: 5px white solid;
+    border-radius: 2em; 
+}
+
 label {
-    margin-top: 50px;
+    align-self: center;
+    font-size: 24px;
 }
 
 input[type=text], select {
   width: 100%;
+  height: 25%;
+  align-self: center;
   padding: 12px 20px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+
 
 /* @media only screen and (max-width: 600px) {
     .feke-details-container {

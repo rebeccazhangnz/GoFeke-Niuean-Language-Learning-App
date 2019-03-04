@@ -44,10 +44,17 @@ class Flashcard extends React.Component{
         return (   
             <div>
                <FekeStatus />
-               <h1>{niueanWords[this.state.index]} means {englishWords[this.state.index]}</h1><br/>
-               <button className="ui purple button" key='previous' onClick={this.handlePrevious}>previous</button>
-                <button className="ui purple button" key='next' onClick={this.handleNext}>next</button>
+               <div className="three column centered grid">
+               <div className="column">
+               <h1>{niueanWords[this.state.index]}</h1> 
+               <h2>{englishWords[this.state.index]}</h2>
+               </div>
+               <div className="column">
+               <button className="ui purple button" key='previous' onClick={this.handlePrevious}>Previous</button>
+                <button className="ui purple button" key='next' onClick={this.handleNext}>Next</button>
                 <Link to='/category'><button className="ui purple button" key='homebtn'>Home</button></Link>
+                </div>
+                </div>
             </div>
            
         )
