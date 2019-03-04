@@ -7,47 +7,46 @@ class Quiz extends React.Component {
         this.props.dispatch(getQuizQuestions())
     }
     render(){
+        const quiz = this.props.questions
+        const allQuestions = quiz.map(question =>question.question)
+        const answers = quiz.answer
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-12">
-            
-                        <form>
-                            <div className="radio">
-                                <label>
-                                    <input type="radio" value="option1" checked={true} />
-                                    Option 1
-                                </label>
-                            </div>
-                            <div className="radio">
-                                <label>
-                                    <input type="radio" value="option2" />
-                                    Option 2
-                                </label>
-                            </div>
-                            <div className="radio">
-                                <label>
-                                    <input type="radio" value="option3" />
-                                        Option 3
-                                    </label>
-                                <label>
-                                    <input type="radio" value="option4" />
-                                        Option 4
-                                </label>
-                            </div>
-                        </form>
-            
+                    <div className="col-sm-12">  
+                    {this.props.questions.map(question => {
+                                return(    
+                                    <div key={question.questions_id}>     
+                                    {question.question}
+                                    <form>                            
+                                        <div className="radio">
+                                           
+                                            <input type="radio" name ={question.id} value={question.option1}  />
+                                                {question.option1}<br/>
+                                                                  
+                                            <input type="radio" name ={question.id} value={question.option2} />
+                                                {question.option2}<br/>                               
+                                          
+                                            <input type="radio" name ={question.id} value={question.option3} />
+                                                {question.option3}<br/>
+                                                                                     
+                                             <input type="radio" name ={question.id} value={question.option4}/>
+                                                {question.option4}
+                                           
+                                        </div>                                  
+                                    </form>  
+                                </div>   
+                            )})}                                 
                     </div>
-                 </div>
-            </div>
-          
+                </div>
+            </div>         
         )
     }
 } 
 
 function mapStateToProps(state){
     return {
-        questions: state.questions
+        questions: state.quiz
     }
 }
 export default connect (mapStateToProps)(Quiz)

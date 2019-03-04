@@ -14,6 +14,10 @@ function isLoading (state = initialState, action) {
       return true
     case 'RECEIVING_FEKE':
       return false
+    case 'REQUESTING_QUESTIONS':
+      return true
+    case 'RECEIVING_QUESTIONS':
+      return false
     default:
       return state
   }
