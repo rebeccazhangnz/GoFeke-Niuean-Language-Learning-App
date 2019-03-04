@@ -17,7 +17,6 @@ export function getQuizQuestions(){
         dispatch(requestQuestions())
         getQuestions()
             .then(questions =>{
-                console.log('quizAction', questions)
                 dispatch(receiveQuestions(questions))
             })
     }    
