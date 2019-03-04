@@ -9,6 +9,7 @@ class Quiz extends React.Component {
             index:0,
             score:0,
             checked: false,
+            submitted:false,
             selectedOption:''
 
         }
@@ -23,27 +24,45 @@ class Quiz extends React.Component {
             checked: true
         })
     }
-    
+    checkAnswerSelected=()=>{
+        if(!this.state.checked){
+            alert('please choose your answer first, then press submit button')
+        } 
+    }
+
+    checkAnswerSubmitted=()=>{
+        if(!this.state.submitted){
+            alert('please submit your answer first, then press next button')
+        }
+    }
     handleSubmit=(e)=>{
         e.preventDefault()
-        console.log('selected', this.state.selectedOption )
+        this.checkAnswerSelected()
         const allAnswers = this.props.questions.map(question =>question.answer)
         if(this.state.selectedOption === allAnswers[this.state.index] ){
             console.log('answer',allAnswers[this.state.index])
             this.setState({
-                score: this.state.score+10
+                score: this.state.score+10,
+                submitted: true
             })
          }
          else{
+            alert('wrong answer :(')
+             this.setState({
+                 submitted:true
+             })
              console.log('wrong answer')
          }
     }
 
     handleNext =(e) =>{ 
-        if(this.props.questions.length && this.state.index+1<this.props.questions.length){
+        this.checkAnswerSelected()
+        this.checkAnswerSubmitted()
+        if(this.state.checked && this.state.submitted && this.props.questions.length && this.state.index+1<this.props.questions.length){
             this.setState({
                 index: this.state.index+1,
-                checked:false
+                checked:false,
+                submitted:false
             }) 
         }
     }
