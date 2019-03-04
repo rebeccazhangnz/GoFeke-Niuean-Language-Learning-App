@@ -103,10 +103,7 @@ class CreateFeke extends React.Component {
             <option village="vaiea">Vaiea</option>
           </select>
            <input type="submit" value="Create feke" />
-<<<<<<< HEAD
-=======
            </div>
->>>>>>> 212da8b707a2b4ce6611e8cd0caaa79b03ae42e6
         </form>
       </div>
     )
