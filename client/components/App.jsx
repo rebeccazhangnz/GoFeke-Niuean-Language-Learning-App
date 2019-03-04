@@ -5,6 +5,7 @@ import Welcome from './Welcome'
 import CreateFeke from './CreateFeke'
 import Dashboard from './Dashboard'
 import Flashcard from './Flashcard'
+import Quiz from './Quiz'
 import Header from './Header'
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path='/feke' component={CreateFeke} />
         <Route exact path='/category' component={Dashboard} />
         <Route path ='/category/:name' component={Flashcard}/>
+        <Route path ='/quiz' component={Quiz} />
       </Switch>
     </React.Fragment>
   )
