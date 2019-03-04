@@ -1,6 +1,11 @@
 import react from 'react'
+import {connect} from 'react-redux'
+import {getQuizQuestions} from '../actions/quiz'
 
 class Quiz extends react.Component {
+    componentDidMount(){
+        this.props.dispatch(getQuizQuestions())
+    }
     render(){
         return (
             <div className="container">
@@ -39,3 +44,10 @@ class Quiz extends react.Component {
         )
     }
 } 
+
+function mapStateToProps(state){
+    return {
+        questions: state.questions
+    }
+}
+export default connect (mapStateToProps)(Quiz)
