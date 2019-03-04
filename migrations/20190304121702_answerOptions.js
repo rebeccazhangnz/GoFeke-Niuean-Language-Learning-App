@@ -5,7 +5,7 @@ exports.up = function (knex, Promise) {
     table.string('option2')
     table.string('option3')
     table.string('option4')
-    table.increments('questions_id').references('questions.id')
+    table.integer('questions_id').references('questions.id')
   })
 }
 

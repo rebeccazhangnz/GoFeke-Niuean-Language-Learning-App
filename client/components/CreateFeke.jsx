@@ -51,31 +51,33 @@ class CreateFeke extends React.Component {
     return (
       <div className="createfeke-page">
         <form onSubmit={this.handleSubmit}>
+        <div className='createfeke-container'>
           <img
-            className="feke-image"
+            className="createfeke-image"
             src="images/feke-blue.png"
             name="feke-blue.png"
             onClick={this.handleOnclick}
           />
           <img
-            className="feke-image"
+            className="createfeke-image"
             src="images/feke-green.png"
             name="feke-green.png"
             onClick={this.handleOnclick}
           />
           <img
-            className="feke-image"
+            className="createfeke-image"
             src="images/feke-purple.png"
             name="feke-purple.png"
             onClick={this.handleOnclick}
           />
           <img
-            className="feke-image"
+            className="createfeke-image"
             src="images/feke-red.png"
             name="feke-red.png"
             onClick={this.handleOnclick}
           />
-
+  </div>
+  <div className="createfeke-container">
           <label htmlFor="name">Name </label>
           <input
             type="text"
@@ -101,6 +103,10 @@ class CreateFeke extends React.Component {
             <option village="vaiea">Vaiea</option>
           </select>
            <input type="submit" value="Create feke" />
+<<<<<<< HEAD
+=======
+           </div>
+>>>>>>> 212da8b707a2b4ce6611e8cd0caaa79b03ae42e6
         </form>
       </div>
     )
