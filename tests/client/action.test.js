@@ -2,21 +2,6 @@ const createFeke = require('../../client/actions/createFeke')
 const getFekeStatus = require('../../client/actions/getFekeStatus')
 const category = require('../../client/actions/index')
 
-test('test updatePercentage returns expected type', () => {
-  const percentage = 100
-  const expected = {
-    percentage: 100,
-    type: 'UPDATE_PERCENTAGE'
-  }
-  const actual = getFekeStatus.updatePercentage(percentage)
-  expect(actual).toEqual(expected)
-})
-
-test('test requestFeke returns expected type', () => {
-  const expected = 'REQUESTING_FEKE'
-  const actual = getFekeStatus.requestFeke().type
-  expect(actual).toEqual(expected)
-})
 
 test('test receiveFeke returns expected type', () => {
   const feke = {
@@ -35,6 +20,24 @@ test('test receiveFeke returns expected type', () => {
   const actual = getFekeStatus.receiveFeke(feke)
   expect(actual).toEqual(expected)
 })
+
+test('test updatePercentage returns expected type', () => {
+  const percentage = 100
+  const expected = {
+    percentage: 100,
+    type: 'UPDATE_PERCENTAGE'
+  }
+  const actual = getFekeStatus.updatePercentage(percentage)
+  expect(actual).toEqual(expected)
+})
+
+test('test requestFeke returns expected type', () => {
+  const expected = 'REQUESTING_FEKE'
+  const actual = getFekeStatus.requestFeke().type
+  expect(actual).toEqual(expected)
+})
+
+
 
 test('test isUpdated returns expected type', () => {
   const expected = 'UPDATED'
