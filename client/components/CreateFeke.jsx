@@ -8,7 +8,7 @@ class CreateFeke extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      category_id: '1',
+      category_id: 1,
       name: '',
       village: 'Avatele',
       image: '',
