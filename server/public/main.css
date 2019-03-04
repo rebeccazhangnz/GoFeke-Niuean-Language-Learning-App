@@ -11,6 +11,10 @@ h1 {
     color: rgb(88, 88, 218);
 }
 
+.radio{
+    align-self: center
+}
+
 h2 {
   text-align: center; 
 }
@@ -124,6 +128,13 @@ button {
     height: 150px;
 }
 
+.quiz-image{
+    width: 300px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 .feke-details-container {
     float: right;
     width: 100%;
