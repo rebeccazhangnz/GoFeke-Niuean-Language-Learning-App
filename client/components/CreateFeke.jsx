@@ -95,7 +95,7 @@ class CreateFeke extends React.Component {
             />
 
             <label htmlFor="village">Village </label>
-            <select value={this.state.village} onChange={this.handleDropdown}>
+            <select className="createfeke-select" value={this.state.village} onChange={this.handleDropdown}>
               <option village="alofi">Alofi</option>
               <option village="avatele">Avatele</option>
               <option village="hakupu">Hakupu</option>
@@ -110,7 +110,7 @@ class CreateFeke extends React.Component {
               <option village="tuapa">Tuapa</option>
               <option village="vaiea">Vaiea</option>
             </select>
-            <input type="submit" value="Create feke" />
+            <input className="createfeke-submit ui purple button" type="submit" value="Create feke" />
           </div>
         </form>
       </div>
