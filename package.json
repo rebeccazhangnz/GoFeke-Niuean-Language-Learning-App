@@ -14,7 +14,7 @@
     "knex": "knex --knexfile ./knexfile.js",
     "updateDb": "rm -f dev.sqlite3 && yarn knex migrate:latest && yarn knex seed:run",
     "test": "jest --watchAll",
-    "e2e": "nodemon server --ignore server/public & webpack --watch & cypress open"
+    "e2e": "concurrently \"nodemon server --ignore server/public\" \"webpack --watch & cypress open\""
   },
   "babel": {
     "presets": [
