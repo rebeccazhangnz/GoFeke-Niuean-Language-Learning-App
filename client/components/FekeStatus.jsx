@@ -34,7 +34,7 @@ class FekeStatus extends React.Component {
             return (
               <div key = {feke.name}>
                 <img className='feke-image' src = {`/images/${feke.image}`}/>
-                {feke.name} from village {feke.village}
+                {feke.name} from {feke.village}
               </div>
             )
           })

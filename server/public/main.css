@@ -10,6 +10,15 @@ h1 {
     text-align: center;
     color: rgb(88, 88, 218);
 }
+
+h2 {
+  text-align: center; 
+}
+
+button {
+  text-align: center;
+}
+
 /* HOME PAGE CSS */
 
 .home-page {
@@ -36,9 +45,8 @@ h1 {
 
 .header {
     overflow: hidden; 
-    /* background: blueviolet;  */
     font-family: 'Bangers', cursive;
-    padding: 5px 5px; 
+    padding: 5px 10px; 
     color: whitesmoke;
 }
 
@@ -47,7 +55,7 @@ h1 {
     text-align: center; 
     padding: 10px; 
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 30px; 
     line-height: 25px; 
     border-radius: 4px; 
 }
