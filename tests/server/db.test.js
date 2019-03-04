@@ -14,11 +14,21 @@ test('Test testing environment', () => {
   expect(true).toBeTruthy()
 })
 
-test('getUsers gets all catogory', () => {
+test('category/getCategoryList returns category names ', () => {
   const expected = 'family'
   return dbCategory.getCategoryList(testDb)
     .then(Category => {
       const actual = Category[0].name
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
+})
+
+test('category/getCategoryList returns category names ', () => {
+  const expected = 6
+  return dbCategory.getCategoryList(testDb)
+    .then(Category => {
+      const actual = Category.length
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())
