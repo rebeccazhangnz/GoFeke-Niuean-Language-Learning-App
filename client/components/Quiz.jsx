@@ -1,8 +1,8 @@
-import react from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 import {getQuizQuestions} from '../actions/quiz'
 
-class Quiz extends react.Component {
+class Quiz extends React.Component {
     componentDidMount(){
         this.props.dispatch(getQuizQuestions())
     }
