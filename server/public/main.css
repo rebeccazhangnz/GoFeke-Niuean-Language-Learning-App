@@ -124,6 +124,48 @@ h1 {
 
 .createfeke-page {
     text-align: center;
+
+}
+
+.createfeke-container {
+    margin-top: 1em;
+    margin-left: auto ;
+    margin-right: auto ;
+    display: grid;
+    width: 300px;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px;
+    
+}
+
+.createfeke-form {
+    margin: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-right: 500px;
+    margin-left: 500px; 
+}
+
+.createfeke-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    width: 150px;
+    height: 150px;
+}
+
+label {
+    margin-top: 50px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* @media only screen and (max-width: 600px) {
@@ -131,6 +173,16 @@ h1 {
     
     }
   } */
+
+  @media only screen and (max-width: 1300px) {
+    .createfeke-form {
+        margin: 10px;
+        border-radius: 5px;
+        padding: 20px;
+        margin-right: 200px;
+        margin-left: 200px; 
+    }
+  }
 
 @media only screen and (max-width: 600px) {
     .dashboard-container {
