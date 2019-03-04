@@ -8,12 +8,18 @@ body {
 }
 h1 {
     text-align: center;
-    color: purple;
+    color: rgb(88, 88, 218);
 }
 /* HOME PAGE CSS */
 
 .home-page {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .home-btn {
@@ -33,7 +39,7 @@ h1 {
     /* background: blueviolet;  */
     font-family: 'Bangers', cursive;
     padding: 5px 5px; 
-    color: rgb(138, 43, 226);
+    color: whitesmoke;
 }
 
 .header a {
@@ -78,6 +84,7 @@ h1 {
     height: 50px;
     width: 150px;
     background-Color: purple;
+    font-size: 20px;
 }
 
 .fekeStatus {
