@@ -142,6 +142,15 @@ h1 {
     height: 150px;
 }
 
+.createfeke-image::selection {
+    background: red; 
+}
+
+.selected {
+    border: 5px white solid;
+    border-radius: 2em; 
+}
+
 label {
     margin-top: 50px;
 }
