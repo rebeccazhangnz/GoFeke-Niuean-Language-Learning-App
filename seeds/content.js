@@ -71,7 +71,7 @@ exports.seed = function (knex, Promise) {
         { id: 65, category_id: 4, english: 'Seventeen', Niuean: 'Hogofulu ma fitu' },
         { id: 66, category_id: 4, english: 'Eighteen', Niuean: 'Hogofulu ma valu' },
         { id: 67, category_id: 4, english: 'Nineteen', Niuean: 'Hogofulu ma hiva' },
-        { id: 68, category_id: 4, english: 'Twenty', Niuean: 'Ua Hogofulu' },
+        { id: 68, category_id: 4, english: 'Twenty', Niuean: 'Ua hogofulu' },
         { id: 69, category_id: 5, english: 'Monday', Niuean: 'Aho gofua' },
         { id: 70, category_id: 5, english: 'Tuesday', Niuean: 'Aho ua' },
         { id: 71, category_id: 5, english: 'Wednesday', Niuean: 'Aho lotu' },
@@ -106,9 +106,9 @@ exports.seed = function (knex, Promise) {
         { id: 100, category_id: 6, english: 'Excited', Niuean: 'Mainiini' },
         { id: 101, category_id: 6, english: 'Tired', Niuean: 'Mategugu' },
         { id: 102, category_id: 6, english: 'Starving', Niuean: 'Matehoge' },
-        { id: 103, category_id: 6, english: 'Sad/Cold', Niuean: 'momoko' },
-        { id: 104, category_id: 6, english: 'Sick', Niuean: 'tatalu' },
-        { id: 105, category_id: 6, english: 'Down/Worried', Niuean: 'tupetupe' }
+        { id: 103, category_id: 6, english: 'Sad/Cold', Niuean: 'Momoko' },
+        { id: 104, category_id: 6, english: 'Sick', Niuean: 'Tatalu' },
+        { id: 105, category_id: 6, english: 'Down/Worried', Niuean: 'Tupetupe' }
 
       ])
     })
