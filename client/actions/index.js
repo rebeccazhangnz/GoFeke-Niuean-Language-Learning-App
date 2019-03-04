@@ -28,7 +28,6 @@ export function fetchCategoryList () {
     dispatch(requestCategoryList())
     getCategoryList()
       .then(list => {
-        console.log('actionside', list)
         dispatch(receiveCategoryList(list))
       })
   }
