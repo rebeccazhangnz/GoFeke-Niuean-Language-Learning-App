@@ -1,7 +1,7 @@
 import {updateFeke as updateFekeApi} from '../api/feke'
 import {receiveFeke} from './getFekeStatus'
 
-function isUpdated () {
+export function isUpdated () {
   return {
     type: 'UPDATED'
   }
