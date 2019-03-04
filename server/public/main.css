@@ -1,7 +1,16 @@
 body {
     background-color: #F7D24A;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Libre Fran', sans-serif;
+    background-image: url(images/leaves.png), url(images/footerwaves.png);
+    background-repeat: no-repeat; 
+    background-position: center bottom, bottom;
+    background-size: 100%;
 }
+h1 {
+    text-align: center;
+    color: purple
+}
+/* HOME PAGE CSS */
 
 .home-page {
     text-align: center;
@@ -17,3 +26,104 @@ body {
     margin: 20px;
 }
 
+.homefooter {
+  background: url(images/footer.png);
+  background-size: 100%;
+}
+
+
+
+/* DASHBOARD CSS  */
+
+.dashboard-page {
+    text-align: center;
+}
+
+.dashboard-container {
+    /* justify-content: space-around;
+    flex-direction: row ; */
+    margin-top: 2em;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.dashboard-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 10em;
+    height: 50px;
+    width: 150px;
+    background-Color: purple;
+}
+
+.fekeStatus {
+    margin: 30px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: blueviolet;
+    text-align: center;
+    width: 75vw;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.25fr;
+    grid-template-areas: ". .";
+}
+
+.feke-image {
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+.feke-details-container {
+    float: right;
+    width: 100%;
+}
+
+.feke-details {
+    width: 100%;
+    text-align: left;
+}
+
+.feke-name {
+    height: 100px;
+    padding: 1em;
+}
+
+.feke-village {
+    height: 100px;
+    padding: 1em;
+}
+
+/* CREATEFEKE CSS */
+
+.createfeke-page {
+    text-align: center;
+}
+
+/* @media only screen and (max-width: 600px) {
+    .feke-details-container {
+    
+    }
+  } */
+
+@media only screen and (max-width: 600px) {
+    .dashboard-container {
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+  }
