@@ -363,10 +363,18 @@ input[type=text], select {
 }
 
 .quizRadio {
-    padding-left: 45%;
-    font-size: 190%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 40vw;
+    padding-left: 15vw;
+    font-size: 2em;
+    /* text-align: center; */
     font-family: 'Lucida Grande';
  }
+
+ input[type=radio] {
+    margin-right: 10px;
+}
 
 .quizSubmit {
     display: flex;
@@ -384,6 +392,8 @@ input[type=text], select {
     grid-template-rows: 1fr;
     grid-template-areas: ". .";
 }
+
+
 
 .score {
     margin-left: 44%;
