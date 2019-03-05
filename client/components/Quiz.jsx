@@ -86,7 +86,7 @@ class Quiz extends React.Component {
                     <h2></h2>
                 </div>
 
-                <h1>Question {this.state.index + 1}</h1>
+                <h1>Question {this.state.index + 1} of {this.props.questions.length}</h1>
                 <h1>{allQuestions[this.state.index]}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="quizRadio">
