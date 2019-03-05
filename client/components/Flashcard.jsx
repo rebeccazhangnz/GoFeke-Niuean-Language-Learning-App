@@ -31,7 +31,7 @@ class Flashcard extends React.Component {
         const {content} = this.props
         const category = content.map(word=>word.name)
         if(this.state.index+1 ===this.props.content.length){
-            alert(`Well done! You have completed studying on category ${category[0]}`)
+            alert(`Well done! You have completed studying the ${category[0]} category.`)
         }
         if(this.props.content.length && this.state.index+1<this.props.content.length){
             this.props.dispatch(updatePercentage(this.state.percentage+1))
@@ -48,7 +48,8 @@ class Flashcard extends React.Component {
 
         return (
             <div>
-               <FekeStatus />
+               {/* <FekeStatus /> */}
+                <h1>Select a flashcard and learn a new word</h1>
                 <div className="ui centered grid">
                     <div className="eight wide column centered">
                         <div class="flip-box centered">
@@ -65,9 +66,10 @@ class Flashcard extends React.Component {
                             </div>
                         </div>
                         <div className="flash-card-btns-container">
-                            <button className="flash-cards ui purple button" key='previous' onClick={this.handlePrevious}>Previous</button>
+                        {/* <Link to='/category'><button className="flash-cards ui purple button" key='homebtn'>Home</button></Link> */}
+                            <button className="flash-cards ui purple button" key='previous' onClick={this.handlePrevious}>Back</button>
                             <button className="flash-cards ui purple button" key='next' onClick={this.handleNext}>Next</button>
-                            <Link to='/category'><button className="flash-cards ui purple button" key='homebtn'>Home</button></Link>
+
                         </div>
                     </div>
                 </div>
