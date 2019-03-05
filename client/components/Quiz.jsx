@@ -81,11 +81,15 @@ class Quiz extends React.Component {
         const allOptions4=quiz.map(question=>question.option4)
         return (
             <div>
-                <img className= 'quiz-image ui centered' src='./images/quiz.png'></img>
+              <div>
+              <p className="scoreboard">Your score is: <br></br>{this.state.score}</p>
+              <h2></h2>
+              </div>
+
                 <h1>Question {this.state.index+1}</h1>
                 <h1>{allQuestions[this.state.index]}</h1>
                 <form onSubmit = {this.handleSubmit}> 
-                    <div className="radio">   
+                    <div className="quizRadio">   
                         <input type="radio" name ={ids[this.state.index]} value={allOptions1[this.state.index]} checked={this.state.selectedOption === allOptions1[this.state.index]} onChange={this.handleChange}/>
                             {allOptions1[this.state.index]}<br/>
                         
@@ -98,13 +102,10 @@ class Quiz extends React.Component {
                         <input type="radio" name ={ids[this.state.index]} value={allOptions4[this.state.index]}  checked={this.state.selectedOption === allOptions4[this.state.index]} onChange={this.handleChange} />
                             {allOptions4[this.state.index]}        
                     </div>
-                    <button type='submit' className="ui purple button" key='submit'>submit</button>  
+                    <button type='submit' className="quizSubmit" key='submit'>submit</button>  
                 </form>
                 <p></p>
-                <button className="ui purple button" key='next' onClick={this.handleNext}>next</button> <br/>
-                {console.log('score', this.state.score)}
-                {console.log('selected', this.state.selectedOption )}
-                Your score is : {this.state.score}
+                <button className="quizSubmit" key='next' onClick={this.handleNext}>next</button> 
             </div>           
         )
     }

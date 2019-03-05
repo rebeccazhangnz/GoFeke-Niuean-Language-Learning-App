@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
+
     <div className="header">
       <Link to = {`/category`}>
         <h1 className="header-left">GO! Feke</h1>
@@ -11,6 +12,7 @@ const Header = () => {
       <h1 className="header-right">Quiz time</h1>
       </Link>
     </div>
+
   )
 }
 

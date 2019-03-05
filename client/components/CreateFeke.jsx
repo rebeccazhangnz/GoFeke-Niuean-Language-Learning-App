@@ -58,7 +58,7 @@ class CreateFeke extends React.Component {
     }
     return (
       <div className="createfeke-page">
-      <h2>Mitaki! Select and name your feke</h2>
+      <h1>Mitaki! Select and name your feke</h1>
         <form onSubmit={this.handleSubmit}>
           <div className='createfeke-container'>
             <img
