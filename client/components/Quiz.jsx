@@ -102,7 +102,7 @@ class Quiz extends React.Component {
                 </form>
                 <p></p>
                 <button className="quizSubmit" key='next' onClick={this.handleNext}>next</button> <br/>
-                <p className="score">Your score is : {this.state.score}</p>
+                <p className="score"> Score : {this.state.score}</p>
             </div>           
         )
     }
