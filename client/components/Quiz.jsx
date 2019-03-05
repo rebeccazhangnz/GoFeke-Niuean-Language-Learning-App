@@ -27,13 +27,13 @@ class Quiz extends React.Component {
     }
     checkAnswerSelected=()=>{
         if(!this.state.checked){
-            return alert('please choose your answer first, then press submit button')
+            return alert('Please choose your answer first, then press submit')
         } 
     }
 
     checkAnswerSubmitted=()=>{
         if(!this.state.submitted){
-            return alert('please submit your answer first, then press next button')
+            return alert('Please submit your answer first, then press next')
         }
     }
     handleSubmit=(e)=>{
@@ -48,10 +48,10 @@ class Quiz extends React.Component {
             })
         }
         else if (this.state.scoreUpdated){
-            alert('you have submitted your answer!')
+            alert('You have already submitted your answer! Go to next question')
         }
         else if (this.state.checked) {
-            alert(`wrong answer, the correct answer is ${allAnswers[this.state.index]}`)
+            alert(`Nakai, the correct answer is ${allAnswers[this.state.index]}`)
              this.setState({
                  submitted:true
              })
