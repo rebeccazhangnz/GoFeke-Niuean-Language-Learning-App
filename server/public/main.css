@@ -49,24 +49,42 @@ button {
 
 .header {
     overflow: hidden; 
-    font-family: 'Bangers', cursive;
-    padding: 15px 30px; 
-    color: whitesmoke;
-
+    padding: 15px 30px;
 }
 
-.header a {
-    float: left; 
-    text-align: center; 
-    padding: 10px; 
-    text-decoration: none;
-    font-size: 20px; 
-    line-height: 25px; 
-    border-radius: 4px; 
-    background-image: url(images/wood-sign.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.header-right {
+  float: right;
+  font-family: 'Bangers', cursive;
+  color: whitesmoke;
+  background-image: url(images/wood-sign.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center; 
+  padding: 10px; 
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px; 
+  border-radius: 4px; 
+  padding: 15px 30px;
+}
+
+.header-left {
+  float: left; 
+  font-family: 'Bangers', cursive;
+  color: whitesmoke;
+  background-image: url(images/wood-sign.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center; 
+  padding: 10px; 
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px; 
+  border-radius: 4px; 
+  padding: 15px 30px;
+
 }
 
 /* DASHBOARD CSS  */

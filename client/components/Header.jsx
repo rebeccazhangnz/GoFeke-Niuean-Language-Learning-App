@@ -5,7 +5,10 @@ const Header = () => {
   return (
     <div className="header">
       <Link to = {`/category`}>
-        <h1 className="header">GO! Feke</h1>
+        <h1 className="header-left">GO! Feke</h1>
+      </Link>
+      <Link to = {`/quiz`}>
+      <h1 className="header-right">Quiz time</h1>
       </Link>
     </div>
   )
