@@ -132,7 +132,7 @@ button {
 }
 
 .feke-image {
-    display: ;
+    display: inline-block;
     width: 200px;
     height: 200px;    
     vertical-align:middle;
