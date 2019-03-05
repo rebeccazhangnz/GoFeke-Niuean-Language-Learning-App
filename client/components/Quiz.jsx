@@ -51,7 +51,7 @@ class Quiz extends React.Component {
             alert('you have submitted your answer!')
         }
         else if (this.state.checked) {
-            alert('wrong answer')
+            alert(`wrong answer, the correct answer is ${allAnswers[this.state.index]}`)
              this.setState({
                  submitted:true
              })
