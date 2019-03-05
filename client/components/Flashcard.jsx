@@ -51,10 +51,10 @@ class Flashcard extends React.Component {
                <FekeStatus />
                 <div className="ui centered grid">
                     <div className="eight wide column centered">
-                        <div class="flip-box">
+                        <div class="flip-box centered">
                              <div class="flip-box-inner">
                                  <div class="flip-box-front">
-                                        <h1>{niueanWords[this.state.index]}</h1> 
+                                        <h1 className="flip-box-text">{niueanWords[this.state.index]}</h1> 
                                 </div>
                                 <div className="flip-box-back">
                                     <h1 className="flip-box-text">{englishWords[this.state.index]}</h1>
@@ -63,15 +63,15 @@ class Flashcard extends React.Component {
                                     <h1>{englishWords[this.state.index]}</h1>
                                 </div>
                             </div>
-                            <div className="flash-card-btns-container">
-                                <button className="flash-cards ui purple button" key='previous' onClick={this.handlePrevious}>Previous</button>
-                                <button className="flash-cards ui purple button" key='next' onClick={this.handleNext}>Next</button>
-                                <Link to='/category'><button className="flash-cards ui purple button" key='homebtn'>Home</button></Link>
-                            </div>
+                        </div>
+                        <div className="flash-card-btns-container">
+                            <button className="flash-cards ui purple button" key='previous' onClick={this.handlePrevious}>Previous</button>
+                            <button className="flash-cards ui purple button" key='next' onClick={this.handleNext}>Next</button>
+                            <Link to='/category'><button className="flash-cards ui purple button" key='homebtn'>Home</button></Link>
                         </div>
                     </div>
                 </div>
-            </div>           
+            </div>          
         )
     }
 }
