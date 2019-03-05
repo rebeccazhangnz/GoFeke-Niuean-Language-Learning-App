@@ -81,7 +81,11 @@ class Quiz extends React.Component {
         const allOptions4=quiz.map(question=>question.option4)
         return (
             <div>
-                <img className= 'quiz-image' src='./images/quiz.png'></img>
+              <div>
+              <p className="scoreboard">Your score is: <br></br>{this.state.score}</p>
+              <h2></h2>
+              </div>
+
                 <h1>Question {this.state.index+1}</h1>
                 <h1>{allQuestions[this.state.index]}</h1>
                 <form onSubmit = {this.handleSubmit}> 
@@ -102,7 +106,6 @@ class Quiz extends React.Component {
                 </form>
                 <p></p>
                 <button className="quizSubmit" key='next' onClick={this.handleNext}>next</button> <br/>
-                <p className="score">Your score is : {this.state.score}</p>
             </div>           
         )
     }

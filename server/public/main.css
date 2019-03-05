@@ -361,19 +361,39 @@ input[type=text], select {
     margin-left: 40%;
 }
 
- .quizRadio {
+.quizRadio {
 padding-left: 45%;
 font-size: 190%;
 font-family: 'Lucida Grande';
  }
 
-  .quizSubmit {
+.quizSubmit {
 margin-left: 47%;
 margin-top: 2%;
   }
 
-  .score {
+.score {
     margin-left: 44%;
     margin-top: 2%;
     font-size: 180%;
   }
+
+.scoreboard {
+  font-family: 'Bangers', cursive;
+  color: whitesmoke;
+  background-image: url(images/wood-sign.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center; 
+  text-decoration: none;
+  font-size: 40px; 
+  line-height: 60px; 
+  border-radius: 4px; 
+  padding: 15px 30px;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
