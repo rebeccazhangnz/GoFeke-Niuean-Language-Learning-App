@@ -60,7 +60,7 @@ class Flashcard extends React.Component {
                                     <h1 className="flip-box-text">{englishWords[this.state.index]}</h1>
                                 </div>
                                 <div class="flip-box-back">
-                                    <h1>{englishWords[this.state.index]}</h1>
+                                    <h1 className='flip-box-text'>{englishWords[this.state.index]}</h1>
                                 </div>
                             </div>
                         </div>
