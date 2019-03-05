@@ -143,4 +143,4 @@ Array [
 
 exports[`<Dashboard /> 1`] = `"<Dashboard />)"`;
 
-exports[`<Header /> 1`] = `"<Link />"`;
+exports[`<Header /> 1`] = `"<Link /><Link />"`;
