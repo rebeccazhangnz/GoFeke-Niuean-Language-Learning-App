@@ -13,14 +13,12 @@ class CreateFeke extends React.Component {
       name: '',
       village: 'Avatele',
       image: '',
-      status: 'Level 1',
-      validInput: false
+      status: 'Level 1'
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOnclick = this.handleOnclick.bind(this)
     this.handleDropdown = this.handleDropdown.bind(this)
     this.handleChange = this.handleChange.bind(this)
-    this.checkInput = this.checkInput.bind(this)
   }
 
   handleOnclick(e) {
@@ -43,36 +41,32 @@ class CreateFeke extends React.Component {
 
   handleSubmit = () => {
     let feke = this.state
-    this.checkInput()
-    if (this.state.validInput) {
-      this.props.dispatch(createFeke(feke))
-    }
-    alert('Please choose an image and enter a feke name !')
+    this.props.dispatch(createFeke(feke))
   }
 
-  checkInput = () => {
-    if ((this.state.image === '') | (this.state.name === '')) {
-      this.setstate({ validInput: false })
-    }
-    this.setstate({ validInput: true })
-  }
-
+  
   render() {
     if (this.props.isUpdated) {
-      return <Redirect to="/category" />
+      if ( this.state.image === ''){
+        this.props.dispatch(resetUpdate())
+        alert('please select an image')
+        return <Redirect to='/feke' />
+      }
+      return <Redirect to='/category' />
     }
 
     const classesFor = color => {
-      return classNames({
-        'createfeke-image': true,
-        selected: this.state.image.includes(color)
-      })
+      return classNames(
+        {
+          'createfeke-image': true,
+          'selected': this.state.image.includes(color)
+        })
     }
     return (
       <div className="createfeke-page">
-        <h1>Mitaki! Select and name your feke</h1>
+      <h1>Mitaki! Select and name your feke</h1>
         <form onSubmit={this.handleSubmit}>
-          <div className="createfeke-container">
+          <div className='createfeke-container'>
             <img
               className={classesFor('blue')}
               src="images/feke-blue.png"
@@ -108,11 +102,7 @@ class CreateFeke extends React.Component {
             />
 
             <label htmlFor="village">Village </label>
-            <select
-              className="createfeke-select"
-              value={this.state.village}
-              onChange={this.handleDropdown}
-            >
+            <select className="createfeke-select" value={this.state.village} onChange={this.handleDropdown}>
               <option village="alofi">Alofi</option>
               <option village="avatele">Avatele</option>
               <option village="hakupu">Hakupu</option>
@@ -127,11 +117,7 @@ class CreateFeke extends React.Component {
               <option village="tuapa">Tuapa</option>
               <option village="vaiea">Vaiea</option>
             </select>
-            <input
-              className="createfeke-submit ui purple button"
-              type="submit"
-              value="GO! FEKE"
-            />
+            <input className="createfeke-submit ui purple button" type="submit" value="GO! FEKE" />
           </div>
         </form>
       </div>
