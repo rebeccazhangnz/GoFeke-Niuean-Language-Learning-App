@@ -27,13 +27,13 @@ class Quiz extends React.Component {
     }
     checkAnswerSelected=()=>{
         if(!this.state.checked){
-            return alert('Please choose your answer first, then press submit')
+            return alert('please choose your answer first, then press submit button')
         } 
     }
 
     checkAnswerSubmitted=()=>{
         if(!this.state.submitted){
-            return alert('Please submit your answer first, then press next')
+            return alert('please submit your answer first, then press next button')
         }
     }
     handleSubmit=(e)=>{
@@ -48,10 +48,10 @@ class Quiz extends React.Component {
             })
         }
         else if (this.state.scoreUpdated){
-            alert('You have already submitted your answer! Go to next question')
+            alert('you have submitted your answer!')
         }
         else if (this.state.checked) {
-            alert(`Nakai, the correct answer is ${allAnswers[this.state.index]}`)
+            alert(`wrong answer, the correct answer is ${allAnswers[this.state.index]}`)
              this.setState({
                  submitted:true
              })
@@ -81,11 +81,11 @@ class Quiz extends React.Component {
         const allOptions4=quiz.map(question=>question.option4)
         return (
             <div>
-                <img className= 'quiz-image ui centered' src='./images/quiz.png'></img>
+                <img className= 'quiz-image' src='./images/quiz.png'></img>
                 <h1>Question {this.state.index+1}</h1>
                 <h1>{allQuestions[this.state.index]}</h1>
                 <form onSubmit = {this.handleSubmit}> 
-                    <div className="radio">   
+                    <div className="quizRadio">   
                         <input type="radio" name ={ids[this.state.index]} value={allOptions1[this.state.index]} checked={this.state.selectedOption === allOptions1[this.state.index]} onChange={this.handleChange}/>
                             {allOptions1[this.state.index]}<br/>
                         
@@ -98,11 +98,11 @@ class Quiz extends React.Component {
                         <input type="radio" name ={ids[this.state.index]} value={allOptions4[this.state.index]}  checked={this.state.selectedOption === allOptions4[this.state.index]} onChange={this.handleChange} />
                             {allOptions4[this.state.index]}        
                     </div>
-                    <button type='submit' className="ui purple button" key='submit'>submit</button>  
+                    <button type='submit' className="quizSubmit" key='submit'>submit</button>  
                 </form>
                 <p></p>
-                <button className="ui purple button" key='next' onClick={this.handleNext}>next</button> <br/>
-                Your score is : {this.state.score}
+                <button className="quizSubmit" key='next' onClick={this.handleNext}>next</button> <br/>
+                <p className="score">Your score is : {this.state.score}</p>
             </div>           
         )
     }
