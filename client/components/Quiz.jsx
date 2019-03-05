@@ -102,8 +102,6 @@ class Quiz extends React.Component {
                 </form>
                 <p></p>
                 <button className="ui purple button" key='next' onClick={this.handleNext}>next</button> <br/>
-                {console.log('score', this.state.score)}
-                {console.log('selected', this.state.selectedOption )}
                 Your score is : {this.state.score}
             </div>           
         )
