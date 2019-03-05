@@ -105,7 +105,7 @@ class Quiz extends React.Component {
                     <button type='submit' className="quizSubmit" key='submit'>submit</button>  
                 </form>
                 <p></p>
-                <button className="quizSubmit" key='next' onClick={this.handleNext}>next</button> <br/>
+                <button className="quizSubmit" key='next' onClick={this.handleNext}>next</button> 
             </div>           
         )
     }

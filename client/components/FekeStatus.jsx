@@ -2,18 +2,6 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import { getFekeStatus } from '../actions/getFekeStatus'
 import { resetUpdate } from '../actions/createFeke'
-import styled from 'styled-components'
-import Progressbar from './Progressbar'
-
-const AppWrapper = styled.div`
-  display:flex;
-  justify-content: center;
-`
-
-const ProgressbarContainer = styled.div`
-  width: 250px;
-  margin-top: 10px;
-`
 
 class FekeStatus extends React.Component {
   constructor(props) {
@@ -46,11 +34,6 @@ class FekeStatus extends React.Component {
           </div>
 
         </div>
-        <AppWrapper>
-          <ProgressbarContainer>
-            <Progressbar />
-          </ProgressbarContainer>
-        </AppWrapper>
       </Fragment>
     )
   }
