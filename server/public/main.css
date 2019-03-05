@@ -251,7 +251,7 @@ input[type=text], select {
 
 .flip-box-front, .flip-box-back {
   position: absolute;
-  border-radius: 15px;
+  border-radius: 10px;
   border-style: solid; 
   border-color: rgb(60, 209, 60);
   width: 100%;
