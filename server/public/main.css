@@ -253,8 +253,28 @@ input[type=text], select {
 
 /* FLASHCARD */
 
+.flash-card-btns-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . .";
+    justify-items: stretch;
+    align-items: center;
+
+  }
+
+.flash-cards {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .flip-box {
   background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
   width: 300px;
   height: 150px;
   perspective: 1000px;
@@ -268,6 +288,12 @@ input[type=text], select {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+}
+
+.flip-box-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
 }
 
 .flip-box:hover .flip-box-inner {
