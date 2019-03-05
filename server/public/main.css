@@ -235,6 +235,24 @@ input[type=text], select {
 
 /* FLASHCARD */
 
+.flash-card-btns-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . .";
+    justify-items: stretch;
+    align-items: center;
+
+  }
+
+.flash-cards {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .flip-box {
   background-color: transparent;
   margin-left: auto;
