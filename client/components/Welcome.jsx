@@ -6,11 +6,11 @@ const Welcome = () => {
   return (
     <div className='welcome-page'>
       <Container textAlign='justified' centered="true" >
-        <h2 className='welcome-p'>Welcome to the feke family!</h2>
+        <h1 className='welcome-p'>Welcome to the feke family!</h1>
         <Image className="ui centered medium image" src="/images/feke-purple.png" />
 
         <h2 className='welcome-p'>
-          Begin your vagahau Niue journey with help from your very own feke.
+          Begin your Niue language journey with help from your very own feke.
         </h2>
         <Link to ={`/feke`}>
           <button className="ui purple button">Adopt feke</button>
