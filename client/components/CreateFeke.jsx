@@ -45,6 +45,7 @@ class CreateFeke extends React.Component {
     let feke = this.state
     this.checkInput()
     if (this.state.validInput) {
+     alert('not')
       this.props.dispatch(createFeke(feke))
     }
     alert('Please choose an image and enter a feke name !')
