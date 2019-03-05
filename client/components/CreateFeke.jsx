@@ -14,7 +14,7 @@ class CreateFeke extends React.Component {
       village: 'Avatele',
       image: '',
       status: 'Level 1',
-      validInput: false
+      validInput: this.props.feke.validInput
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOnclick = this.handleOnclick.bind(this)
@@ -43,23 +43,20 @@ class CreateFeke extends React.Component {
 
   handleSubmit = () => {
     let feke = this.state
-    this.checkInput()
-    if (this.state.validInput) {
-     alert('not')
       this.props.dispatch(createFeke(feke))
-    }
-    alert('Please choose an image and enter a feke name !')
   }
 
   checkInput = () => {
     if ((this.state.image === '') | (this.state.name === '')) {
-      this.setstate({ validInput: false })
-    }
-    this.setstate({ validInput: true })
+      this.setState({ validInput: false })
+      alert('Please choose a feke image and enter a Feke Name')
+    }else{
+      this.setState({ validInput: true })}
+      this. handleSubmit
   }
 
   render() {
-    if (this.props.isUpdated) {
+    if (this.props.isUpdated && this.props.feke.validInput) {
       return <Redirect to="/category" />
     }
 
@@ -72,7 +69,7 @@ class CreateFeke extends React.Component {
     return (
       <div className="createfeke-page">
         <h1>Mitaki! Select and name your feke</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.checkInput}>
           <div className="createfeke-container">
             <img
               className={classesFor('blue')}
@@ -142,6 +139,7 @@ class CreateFeke extends React.Component {
 
 const mapStateToProps = state => ({
   isUpdated: state.isUpdated,
+  feke: state.feke,
   fekeColor: null
 })
 
