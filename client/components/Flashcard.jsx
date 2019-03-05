@@ -31,9 +31,6 @@ class Flashcard extends React.Component{
         const {content} = this.props
         const category = content.map(word=>word.name)
         if(this.state.index+1 ===this.props.content.length){
-            // this.setState({
-            //     message: `Well done! You have completed studying on category ${category[0]}`
-            // })
             alert(`Well done! You have completed studying on category ${category[0]}`)
         }
         if(this.props.content.length && this.state.index+1<this.props.content.length){
