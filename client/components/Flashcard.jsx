@@ -27,9 +27,14 @@ class Flashcard extends React.Component {
         }
     }
 
-    handleNext = (e) => {
-        if (this.props.content.length && this.state.index + 1 < this.props.content.length) {
-            this.props.dispatch(updatePercentage(this.state.percentage + 1))
+    handleNext =(e) =>{ 
+        const {content} = this.props
+        const category = content.map(word=>word.name)
+        if(this.state.index+1 ===this.props.content.length){
+            alert(`Well done! You have completed studying on category ${category[0]}`)
+        }
+        if(this.props.content.length && this.state.index+1<this.props.content.length){
+            this.props.dispatch(updatePercentage(this.state.percentage+1))
             this.setState({
                 index: this.state.index + 1,
                 percentage: this.state.percentage + 1
@@ -43,16 +48,19 @@ class Flashcard extends React.Component {
 
         return (
             <div>
-                <FekeStatus />
+               <FekeStatus />
                 <div className="ui centered grid">
                     <div className="eight wide column centered">
-                        <div className="flip-box centered">
-                            <div className="flip-box-inner">
-                                <div className="flip-box-front">
-                                    <h1 className="flip-box-text">{niueanWords[this.state.index]}</h1>
+                        <div class="flip-box centered">
+                             <div class="flip-box-inner">
+                                 <div class="flip-box-front">
+                                        <h1 className="flip-box-text">{niueanWords[this.state.index]}</h1> 
                                 </div>
                                 <div className="flip-box-back">
                                     <h1 className="flip-box-text">{englishWords[this.state.index]}</h1>
+                                </div>
+                                <div class="flip-box-back">
+                                    <h1 className='flip-box-text'>{englishWords[this.state.index]}</h1>
                                 </div>
                             </div>
                         </div>
@@ -63,8 +71,7 @@ class Flashcard extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div>          
         )
     }
 }
