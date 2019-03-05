@@ -1,28 +1,28 @@
 import React from 'react'
-import {connect}from 'react-redux'
+import { connect } from 'react-redux'
 import FekeStatus from './FekeStatus'
 import { Link } from 'react-router-dom'
-import {fetchCategory} from '../actions'
-import {updatePercentage}from '../actions/getFekeStatus'
+import { fetchCategory } from '../actions'
+import { updatePercentage } from '../actions/getFekeStatus'
 
-class Flashcard extends React.Component{
-    constructor(props){
+class Flashcard extends React.Component {
+    constructor(props) {
         super(props)
-        this.state={
-            index:0,
-            percentage:this.props.percentage
+        this.state = {
+            index: 0,
+            percentage: this.props.percentage
         }
     }
 
-    componentDidMount(){
-        const name =this.props.match.params.name
+    componentDidMount() {
+        const name = this.props.match.params.name
         this.props.dispatch(fetchCategory(name))
     }
 
-    handlePrevious =(e)=>{
-        if(this.props.content.length && this.state.index-1>=0){
+    handlePrevious = (e) => {
+        if (this.props.content.length && this.state.index - 1 >= 0) {
             this.setState({
-                index: this.state.index-1
+                index: this.state.index - 1
             })
         }
     }
@@ -36,17 +36,17 @@ class Flashcard extends React.Component{
         if(this.props.content.length && this.state.index+1<this.props.content.length){
             this.props.dispatch(updatePercentage(this.state.percentage+1))
             this.setState({
-                index: this.state.index+1,
-                percentage:this.state.percentage + 1
-            }) 
+                index: this.state.index + 1,
+                percentage: this.state.percentage + 1
+            })
         }
     }
-    render(){
-        const {content} = this.props
-        const niueanWords = content.map(word=>word.niuean)
-        const englishWords = content.map(word=>word.english)
+    render() {
+        const { content } = this.props
+        const niueanWords = content.map(word => word.niuean)
+        const englishWords = content.map(word => word.english)
 
-        return (   
+        return (
             <div>
                <FekeStatus />
                 <div className="ui centered grid">
@@ -72,10 +72,10 @@ class Flashcard extends React.Component{
         )
     }
 }
-function mapStateToProps(state){
+function mapStateToProps(state) {
     return {
         content: state.content,
-        percentage:state.percentage
+        percentage: state.percentage
     }
 }
-export default connect (mapStateToProps)(Flashcard)
+export default connect(mapStateToProps)(Flashcard)
