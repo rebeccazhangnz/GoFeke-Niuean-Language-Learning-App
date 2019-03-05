@@ -105,6 +105,8 @@ button {
     font-size: 2em;
 }
 
+
+
 .button {
     margin: 10em;
     height: 50px;
@@ -113,24 +115,29 @@ button {
     font-size: 20px;
 }
 
-.fekeStatus {
-    margin: 30px;
+.feke-container {
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
     border-style: solid;
     border-radius: 15px;
     border-color: blueviolet;
     text-align: center;
-    width: 75vw;
-    height: 150px;
+    width: 400px;
+    height: 300px;
     display: grid;
-    grid-template-columns: 0.25fr 1fr;
-    grid-template-rows: 0.25fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: ". .";
 }
 
 .feke-image {
-    float: left;
-    width: 150px;
-    height: 150px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;    
+    vertical-align:middle;
+    text-align:center;
+
 }
 
 .quiz-image{
@@ -143,7 +150,7 @@ button {
 .feke-details-container {
     float: right;
     width: 100%;
-}
+} */
 
 .feke-details {
     width: 100%;
