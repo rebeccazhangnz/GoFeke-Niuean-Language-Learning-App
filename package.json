@@ -13,7 +13,7 @@
     "server": "nodemon server --ignore server/public",
     "knex": "knex --knexfile ./knexfile.js",
     "updateDb": "rm -f dev.sqlite3 && yarn knex migrate:latest && yarn knex seed:run",
-    "test": "jest --watchAll",
+    "test": "jest --watchAll --silent",
     "e2e": "concurrently \"nodemon server --ignore server/public\" \"webpack --watch & cypress open\""
   },
   "jest": {
