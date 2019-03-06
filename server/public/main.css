@@ -363,17 +363,43 @@ input[type=text], select {
 }
 
 .quizRadio {
-    padding-left: 45%;
-    font-size: 190%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 40vw;
+    padding-left: 15vw;
+    font-size: 2em;
+    /* text-align: center; */
     font-family: 'Lucida Grande';
  }
+
+.answer {
+    grid-area: answer;
+}
+
+ .next {
+     grid-area: next;
+ }
+
+.submit {
+    grid-area: submit;
+}
+
+.check-answers {
+    grid-area: check-answers;
+    max-height: 50px;
+}
+
+ input[type=radio] {
+    margin-right: 10px;
+}
 
 .quizSubmit {
     display: flex;
     width: 100%;
+    margin-top: 20px;
   }
 
-.quiz-btn-container {
+.quiz-grid-container {
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
@@ -381,9 +407,10 @@ input[type=text], select {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". .";
+    grid-template-rows: auto 50px auto;
+    grid-template-areas: "answer answer" "check-answers check-answers" "next submit";
 }
+
 
 .score {
     margin-left: 44%;

@@ -17,7 +17,7 @@ exports.seed = function (knex, Promise) {
         { id: 10, questions_id: 10, option1: 'Afimafi', option2: 'Afiafi', option3: 'Tupou laa', option4: 'Pale laa' },
         { id: 11, questions_id: 11, option1: 'Mokomo', option2: 'Hoge', option3: 'Tatalu', option4: 'Momoko' },
         { id: 12, questions_id: 12, option1: 'Tama taane', option2: 'Fifine', option3: 'Taane tama', option4: 'Tama tama' },
-        { id: 13, questions_id: 13, option1: 'Tama taane', option2: 'Tama fifine', option3: 'Futi', option4: 'Tama' },
+        { id: 13, questions_id: 13, option1: 'Tama', option2: 'Tama fifine', option3: 'Futi', option4: 'Tama tanne' },
         { id: 14, questions_id: 14, option1: 'Futi', option2: 'Keke', option3: 'Fepuali', option4: 'Mulu' },
         { id: 15, questions_id: 15, option1: 'Cabegi', option2: 'Cabbagi', option3: 'Kapesi', option4: 'Kapisi' },
         { id: 16, questions_id: 16, option1: 'Monuina e po', option2: 'Monuina e pa', option3: 'Monuina poi e', option4: 'Monu e po' },
