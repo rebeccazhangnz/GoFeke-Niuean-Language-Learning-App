@@ -106,7 +106,7 @@ exports.seed = function (knex, Promise) {
         { id: 100, category_id: 6, english: 'excited', Niuean: 'mainiini' },
         { id: 101, category_id: 6, english: 'tired', Niuean: 'mategugu' },
         { id: 102, category_id: 6, english: 'starving', Niuean: 'matehoge' },
-        { id: 103, category_id: 6, english: 'sad/Cold', Niuean: 'momoko' },
+        { id: 103, category_id: 6, english: 'sad / cold', Niuean: 'momoko' },
         { id: 104, category_id: 6, english: 'sick', Niuean: 'tatalu' },
         { id: 105, category_id: 6, english: 'down / worried', Niuean: 'tupetupe' }
 
