@@ -14,7 +14,7 @@ class CreateFeke extends React.Component {
       village: 'Avatele',
       image: '',
       status: 'Level 1',
-      validInput: this.props.feke.validInput
+      validInput: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOnclick = this.handleOnclick.bind(this)
@@ -46,17 +46,19 @@ class CreateFeke extends React.Component {
   }
 
   checkInput = () => {
-    if ((this.state.image === '') | (this.state.name === '')) {
-      this.setState({ validInput: false })
-      alert('Please choose a feke image and enter a Feke Name')
-    }else{
-      this.setState({ validInput: true })}
-      this. handleSubmit
+    if (this.state.image === ''){
+     this.setState({ validInput: 'Please choose an image for your feke' })
+     return
+    }else if(this.state.name === ''){
+     this.setState({ validInput: 'Please enter a name for your feke' })
+     return
+    }
+      this.handleSubmit()
   }
 
   
   render() {
-    if (this.props.isUpdated && this.props.feke.validInput) {
+    if (this.props.isUpdated) {
       return <Redirect to="/category" />
     }
 
@@ -69,6 +71,7 @@ class CreateFeke extends React.Component {
     }
     return (
       <div className="createfeke-page">
+        <h4 className = 'validateInput'>{this.state.validInput}</h4>
         <h1>Mitaki! Select and name your feke</h1>
         <form onSubmit={this.checkInput}>
           <div className="createfeke-container">
