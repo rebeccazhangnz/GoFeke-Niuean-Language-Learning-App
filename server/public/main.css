@@ -384,6 +384,11 @@ input[type=text], select {
     grid-area: submit;
 }
 
+.check-answers {
+    grid-area: check-answers;
+    max-height: 50px;
+}
+
  input[type=radio] {
     margin-right: 10px;
 }
@@ -392,7 +397,6 @@ input[type=text], select {
     display: flex;
     width: 100%;
     margin-top: 20px;
-
   }
 
 .quiz-grid-container {
@@ -403,10 +407,9 @@ input[type=text], select {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "answer answer" "submit next";
+    grid-template-rows: auto 50px auto;
+    grid-template-areas: "answer answer" "check-answers check-answers" "next submit";
 }
-
 
 
 .score {
