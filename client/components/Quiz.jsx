@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getQuizQuestions } from '../actions/quiz'
-import { isThisISOWeek } from 'date-fns';
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -29,7 +28,7 @@ class Quiz extends React.Component {
     checkAnswerSelected = () => {
         if (!this.state.checked) {
             this.setState({
-                message: 'please choose your answer first, then press submit button'
+                message: 'Please choose your answer first, then press check answer.'
             })
         }
     }
@@ -37,7 +36,7 @@ class Quiz extends React.Component {
     checkAnswerSubmitted = () => {
         if (!this.state.submitted) {
             this.setState({
-                message: 'please select your answer first, then press next button'
+                message: 'Please check answer first, then press next.'
             })
         }
     }
@@ -51,17 +50,17 @@ class Quiz extends React.Component {
                 score: this.state.score + 5,
                 submitted: true,
                 scoreUpdated: true,
-                message: 'correct answer! Good work!'
+                message: 'Correct answer! Good work!'
             })
         }
         else if (this.state.scoreUpdated) {
             this.setState({
-                message: 'you have submitted your answer!'
+                message: 'You have checked your answer!'
             })
         }
         else if (this.state.checked) {
             this.setState({
-                message: `correct answer is ${allAnswers[this.state.index]}`,
+                message: `Correct answer is ${allAnswers[this.state.index]}.`,
                 submitted: true
             })
         }
@@ -100,7 +99,7 @@ class Quiz extends React.Component {
                     <p className="scoreboard">Your score is: <br></br>{this.state.score}</p>
                     <h2></h2>
                 </div>
-                <h1>Question {this.state.index + 1} of {this.props.questions.length}</h1>
+                <h2>Question {this.state.index + 1} of {this.props.questions.length}</h2>
                 <h1>{allQuestions[this.state.index]}</h1>
 
                 <form onSubmit={this.handleSubmit}>
