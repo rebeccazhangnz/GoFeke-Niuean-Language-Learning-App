@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getQuizQuestions } from '../actions/quiz'
+import { isThisISOWeek } from 'date-fns';
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -11,8 +12,8 @@ class Quiz extends React.Component {
             scoreUpdated: false,
             checked: false,
             submitted: false,
-            selectedOption: ''
-
+            selectedOption: '',
+            message: ''
         }
     }
     componentDidMount() {
@@ -70,6 +71,11 @@ class Quiz extends React.Component {
                 scoreUpdated: false
             })
         }
+        else if (this.state.index + 1 === this.props.questions.length) {
+            this.setState({
+                message: 'Congratulations! You have completed all the quiz questions. Well done!'
+            })
+        }
         e.preventDefault()
     }
     render() {
@@ -86,8 +92,8 @@ class Quiz extends React.Component {
                     <p className="scoreboard">Your score is: <br></br>{this.state.score}</p>
                     <h2></h2>
                 </div>
-
-                <h1>Question {this.state.index + 1}</h1>
+                <h1>{this.state.message}</h1>
+                <h1>Question {this.state.index + 1} of {this.props.questions.length}</h1>
                 <h1>{allQuestions[this.state.index]}</h1>
 
                 <form onSubmit={this.handleSubmit}>
@@ -102,13 +108,12 @@ class Quiz extends React.Component {
                             <input className="answer" type="radio" name={ids[this.state.index]} value={allOptions3[this.state.index]} checked={this.state.selectedOption === allOptions3[this.state.index]} onChange={this.handleChange} />
                             {allOptions3[this.state.index]}<br />
 
-                            <input className="answer" type="radio" name={ids[this.state.index]} value={allOptions4[this.state.index]} checked={this.state.selectedOption === allOptions4[this.state.index]} onChange={this.handleChange} />
+                            <input type="radio" name={ids[this.state.index]} value={allOptions4[this.state.index]} checked={this.state.selectedOption === allOptions4[this.state.index]} onChange={this.handleChange} />
                             {allOptions4[this.state.index]}
                         </div>
-                        <button className="quizSubmit next ui purple button" key='next' onClick={this.handleNext}>next</button>
-                        <button className="quizSubmit submit ui purple button" type='submit' key='submit'>check answer</button>
+                        <button className="quizSubmit ui purple button" key='next' onClick={this.handleNext}>next</button>
+                        <button className="quizSubmit ui purple button" type='submit' key='submit'>check answer</button>
                     </div>
-
                 </form>
             </div>
         )
