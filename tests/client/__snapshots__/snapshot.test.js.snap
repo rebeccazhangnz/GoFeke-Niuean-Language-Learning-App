@@ -5,6 +5,11 @@ Array [
   <div
     className="createfeke-page"
   >
+    <h3
+      className="validateInput"
+    >
+      
+    </h3>
     <h1>
       Mitaki! Select and name your feke
     </h1>

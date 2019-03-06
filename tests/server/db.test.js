@@ -1,4 +1,4 @@
-const testEnv = require('./test-environment')
+const testEnv = require('../setup-testDb-env')
 const dbFeke = require('../../server/db/feke')
 const dbCategory = require('../../server/db/category')
 
