@@ -1,23 +1,23 @@
 import {getCategory, getCategoryList} from '../api/category'
 
-function requestContent () {
+export function requestContent () {
   return {
     type: 'REQUESTING_CONTENT'
   }
 }
 
-function receiveContent (content) {
+export function receiveContent (content) {
   return {
     type: 'RECEIVING_CONTENT',
     content: content
   }
 }
-function requestCategoryList () {
+export function requestCategoryList () {
   return {
     type: 'REQUESTING_CATEGORY_LIST'
   }
 }
-function receiveCategoryList (list) {
+export function receiveCategoryList (list) {
   return {
     type: 'RECEIVING_CATEGORY_LIST',
     categoryList: list

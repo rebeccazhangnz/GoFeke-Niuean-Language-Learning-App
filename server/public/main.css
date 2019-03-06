@@ -24,6 +24,16 @@ h2 {
   text-align: center; 
 }
 
+.validateInput{
+    position: fixed;
+    top:6vh;
+    width: 40vw;
+    margin-left:30vw;
+    margin-right:30vw;
+    display: block;
+    color: red
+}
+
 button {
   text-align: center;
 }

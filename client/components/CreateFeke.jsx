@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { createFeke } from '../actions/createFeke'
 import { Redirect } from 'react-router'
+import { resetUpdate } from '../actions/createFeke'
 import classNames from 'classnames'
 
 class CreateFeke extends React.Component {
@@ -12,7 +13,8 @@ class CreateFeke extends React.Component {
       name: '',
       village: 'Avatele',
       image: '',
-      status: 'Level 1'
+      status: 'Level 1',
+      validateInput: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOnclick = this.handleOnclick.bind(this)
@@ -40,16 +42,27 @@ class CreateFeke extends React.Component {
 
   handleSubmit = () => {
     let feke = this.state
-    this.props.dispatch(createFeke(feke))
+      this.props.dispatch(createFeke(feke))
   }
 
+  checkInput = (e) => {
+    if (this.state.image === ''){
+     this.setState({ validateInput: 'Please select an image for your feke!' })
+    }else if(this.state.name === ''){
+     this.setState({ validateInput: 'Please enter a name for your feke!' })
+    }else if(this.state.image !== ''&& this.state.name !== ''){
+      this.handleSubmit()
+    }
+    e.preventDefault()
+  }
+
+  
   render() {
     if (this.props.isUpdated) {
-      return <Redirect to='/category' />
+      return <Redirect to="/category" />
     }
 
     const classesFor = color => {
-      console.log('triggered')
       return classNames(
         {
           'createfeke-image': true,
@@ -58,9 +71,10 @@ class CreateFeke extends React.Component {
     }
     return (
       <div className="createfeke-page">
-      <h1>Mitaki! Select and name your feke</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div className='createfeke-container'>
+        <h3 className = 'validateInput'>{this.state.validateInput}</h3>
+        <h1>Mitaki! Select and name your feke</h1>
+        <form onSubmit={this.checkInput}>
+          <div className="createfeke-container">
             <img
               className={classesFor('blue')}
               src="images/feke-blue.png"

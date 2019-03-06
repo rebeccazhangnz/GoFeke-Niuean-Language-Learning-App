@@ -13,8 +13,13 @@
     "server": "nodemon server --ignore server/public",
     "knex": "knex --knexfile ./knexfile.js",
     "updateDb": "rm -f dev.sqlite3 && yarn knex migrate:latest && yarn knex seed:run",
-    "test": "jest --watchAll",
+    "test": "jest --watchAll --silent",
     "e2e": "concurrently \"nodemon server --ignore server/public\" \"webpack --watch & cypress open\""
+  },
+  "jest": {
+    "setupFiles": [
+      "./tests/setup-enzyme-env.js"
+    ]
   },
   "babel": {
     "presets": [
@@ -59,15 +64,18 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^0.28.4",
-    "cypress": "^3.1.5",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^24.1.0",
     "nodemon": "^1.18.10",
     "react": "^16.8.2",
+    "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.8.2",
+    "react-test-renderer": "^16.8.3",
+    "redux-mock-store": "^1.5.3",
     "style-loader": "^0.18.2",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.1"

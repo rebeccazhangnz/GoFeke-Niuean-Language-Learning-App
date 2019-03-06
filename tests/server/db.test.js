@@ -1,4 +1,4 @@
-const testEnv = require('./test-environment')
+const testEnv = require('../setup-testDb-env')
 const dbFeke = require('../../server/db/feke')
 const dbCategory = require('../../server/db/category')
 
@@ -29,6 +29,27 @@ test('category/getCategoryList returns category names ', () => {
   return dbCategory.getCategoryList(testDb)
     .then(Category => {
       const actual = Category.length
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
+})
+
+
+test('category/getCategoryIdByName returns corresponding category id ', () => {
+  const expected = 3
+  return dbCategory.getCategoryIdByName('greetings', testDb)
+    .then(Category => {
+      const actual = Category[0].id
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
+})
+
+test('category/getCategoryIdByName returns id', () => {
+  const expected = 1
+  return dbCategory.getCategoryIdByName('family', testDb)
+    .then(content => {
+      const actual = content.length
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())

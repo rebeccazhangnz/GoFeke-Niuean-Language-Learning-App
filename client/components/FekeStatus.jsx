@@ -22,10 +22,10 @@ class FekeStatus extends React.Component {
           <div className="feke">
             {this.props.feke.map(feke => {
               return (
-                <Fragment>
+                <Fragment key = {feke.id}>
                   <div className="feke-image-container" key={feke.name}>
-                    <img className='feke-image' src={`/images/${feke.image}`} />
-                    <h1>{feke.name} from {feke.village}</h1>
+                    <img key = {feke.image}className='feke-image' src={`/images/${feke.image}`} />
+                    <h1 key = {feke.village}>{feke.name} from {feke.village}</h1>
                   </div>
                 </Fragment>
               )
