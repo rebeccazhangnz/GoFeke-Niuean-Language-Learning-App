@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchCategoryList } from '../actions'
 
+const capitalize = (word) => {
+  return word[0].toUpperCase() + word.split('').slice(1).join('')
+}
+
 class CategoryList extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchCategoryList())
@@ -18,7 +22,7 @@ class CategoryList extends React.Component {
           {this.props.categoryList && this.props.categoryList.map(list => {
             return (
               <Link className="dashboard-btn" to={`/category/${list.name}`} key={list.name}>
-                <button className="dashboard-btn ui purple button"> {list.name}
+                <button className="dashboard-btn ui purple button">{capitalize(list.name)}
                 </button>
               </Link>
             )
