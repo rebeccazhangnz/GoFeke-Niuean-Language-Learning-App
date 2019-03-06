@@ -37,7 +37,7 @@ class Quiz extends React.Component {
     checkAnswerSubmitted = () => {
         if (!this.state.submitted) {
             this.setState({
-                message:'please submit your answer first, then press next button'
+                message: 'please submit your answer first, then press next button'
             })
         }
     }
@@ -51,17 +51,17 @@ class Quiz extends React.Component {
                 score: this.state.score + 5,
                 submitted: true,
                 scoreUpdated: true,
-                message:'correct answer! Good work!'
+                message: 'correct answer! Good work!'
             })
         }
         else if (this.state.scoreUpdated) {
-             this.setState({
-                 message:'you have submitted your answer!'
-             })
-            }     
+            this.setState({
+                message: 'you have submitted your answer!'
+            })
+        }
         else if (this.state.checked) {
             this.setState({
-                message:`wrong answer, the correct answer is ${allAnswers[this.state.index]}`,
+                message: `correct answer is ${allAnswers[this.state.index]}`,
                 submitted: true
             })
         }
@@ -76,7 +76,7 @@ class Quiz extends React.Component {
                 checked: false,
                 submitted: false,
                 scoreUpdated: false,
-                message:''
+                message: ''
             })
         }
         else if (this.state.index + 1 === this.props.questions.length) {
@@ -118,12 +118,11 @@ class Quiz extends React.Component {
                             <input className='answer' type="radio" name={ids[this.state.index]} value={allOptions4[this.state.index]} checked={this.state.selectedOption === allOptions4[this.state.index]} onChange={this.handleChange} />
                             {allOptions4[this.state.index]}
                         </div>
-                       
-                        <button className="quizSubmit ui purple button" key='next' onClick={this.handleNext}>next</button>
-                        <button className="quizSubmit ui purple button" type='submit' key='submit'>check answer</button>
-                        <div>
+                        <div className="check-answers">
                             <h1>{this.state.message}</h1>
-                        </div> 
+                        </div>
+                        <button className="quizSubmit ui purple button" type='submit' key='submit'>check answer</button>
+                        <button className="quizSubmit ui purple button" key='next' onClick={this.handleNext}>next</button>
                     </div>
                 </form>
             </div>
