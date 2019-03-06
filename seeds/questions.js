@@ -15,7 +15,7 @@ exports.seed = function (knex, Promise) {
         { id: 8, question: 'How do you say 10?', answer: 'Hogofulu' },
         { id: 9, question: 'How do you say morning?', answer: 'Mogo pogipogi' },
         { id: 10, question: 'How do you say evening?', answer: 'Afiafi' },
-        { id: 11, question: 'How do you say sad/cold?', answer: 'Momoko' },
+        { id: 11, question: 'How do you say sad / cold?', answer: 'Momoko' },
         { id: 12, question: 'How do you say boy?', answer: 'Tama taane' },
         { id: 13, question: 'How do you say girl?', answer: 'Tama fifine' },
         { id: 14, question: 'How do you say banana?', answer: 'Futi' },
