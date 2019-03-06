@@ -13,7 +13,8 @@ class CreateFeke extends React.Component {
       name: '',
       village: 'Avatele',
       image: '',
-      status: 'Level 1'
+      status: 'Level 1',
+      validInput: this.props.feke.validInput
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOnclick = this.handleOnclick.bind(this)
@@ -41,18 +42,22 @@ class CreateFeke extends React.Component {
 
   handleSubmit = () => {
     let feke = this.state
-    this.props.dispatch(createFeke(feke))
+      this.props.dispatch(createFeke(feke))
+  }
+
+  checkInput = () => {
+    if ((this.state.image === '') | (this.state.name === '')) {
+      this.setState({ validInput: false })
+      alert('Please choose a feke image and enter a Feke Name')
+    }else{
+      this.setState({ validInput: true })}
+      this. handleSubmit
   }
 
   
   render() {
-    if (this.props.isUpdated) {
-      if ( this.state.image === ''){
-        this.props.dispatch(resetUpdate())
-        alert('please select an image')
-        return <Redirect to='/feke' />
-      }
-      return <Redirect to='/category' />
+    if (this.props.isUpdated && this.props.feke.validInput) {
+      return <Redirect to="/category" />
     }
 
     const classesFor = color => {
@@ -64,9 +69,9 @@ class CreateFeke extends React.Component {
     }
     return (
       <div className="createfeke-page">
-      <h1>Mitaki! Select and name your feke</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div className='createfeke-container'>
+        <h1>Mitaki! Select and name your feke</h1>
+        <form onSubmit={this.checkInput}>
+          <div className="createfeke-container">
             <img
               className={classesFor('blue')}
               src="images/feke-blue.png"
@@ -127,6 +132,7 @@ class CreateFeke extends React.Component {
 
 const mapStateToProps = state => ({
   isUpdated: state.isUpdated,
+  feke: state.feke,
   fekeColor: null
 })
 
