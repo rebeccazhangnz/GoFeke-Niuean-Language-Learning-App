@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getQuizQuestions } from '../actions/quiz'
+import { isThisISOWeek } from 'date-fns';
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -11,8 +12,8 @@ class Quiz extends React.Component {
             scoreUpdated: false,
             checked: false,
             submitted: false,
-            selectedOption: ''
-
+            selectedOption: '',
+            message:''
         }
     }
     componentDidMount() {
@@ -70,6 +71,11 @@ class Quiz extends React.Component {
                 scoreUpdated: false
             })
         }
+        else if(this.state.index +1 ===this.props.questions.length){
+            this.setState({
+                message:'Congratulations! You have completed all the quiz questions. Well done!'
+            })
+        }
     }
     render() {
         const quiz = this.props.questions
@@ -85,7 +91,7 @@ class Quiz extends React.Component {
                     <p className="scoreboard">Your score is: <br></br>{this.state.score}</p>
                     <h2></h2>
                 </div>
-
+                <h1>{this.state.message}</h1>
                 <h1>Question {this.state.index + 1} of {this.props.questions.length}</h1>
                 <h1>{allQuestions[this.state.index]}</h1>
                 <form onSubmit={this.handleSubmit}>
@@ -104,10 +110,9 @@ class Quiz extends React.Component {
                     </div>
                     <div className="quiz-btn-container">
                         <button className="quizSubmit ui purple button" type='submit' key='submit'>submit</button>
-                        <button className="quizSubmit ui purple button" key='next' onClick={this.handleNext}>next</button>
                     </div>
                 </form>
-                <p></p>
+                <button className="quizSubmit ui purple button" key='next' onClick={this.handleNext}>next</button>
             </div>
         )
     }
