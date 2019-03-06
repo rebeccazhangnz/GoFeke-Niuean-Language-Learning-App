@@ -118,10 +118,10 @@ class Quiz extends React.Component {
                             {allOptions4[this.state.index]}
                         </div>
                         <div className="check-answers">
-                            <h1>{this.state.message}</h1>
+                            <h4>{this.state.message}</h4>
                         </div>
-                        <button className="quizSubmit ui purple button" type='submit' key='submit'>check answer</button>
-                        <button className="quizSubmit ui purple button" key='next' onClick={this.handleNext}>next</button>
+                        <button className="quizSubmit ui purple button" type='submit' key='submit'>Check Answer</button>
+                        <button className="quizSubmit ui purple button" key='next' onClick={this.handleNext}>Next</button>
                     </div>
                 </form>
             </div>
