@@ -26,9 +26,10 @@ h2 {
 
 .validateInput{
     position: fixed;
-    top:5vh;
-    margin-left:40vw;
-    margin-right:40vw;
+    top:6vh;
+    width: 40vw;
+    margin-left:30vw;
+    margin-right:30vw;
     display: block;
     color: red
 }
