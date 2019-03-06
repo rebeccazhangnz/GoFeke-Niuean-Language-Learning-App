@@ -372,6 +372,18 @@ input[type=text], select {
     font-family: 'Lucida Grande';
  }
 
+.answer {
+    grid-area: answer;
+}
+
+ .next {
+     grid-area: next;
+ }
+
+.submit {
+    grid-area: submit;
+}
+
  input[type=radio] {
     margin-right: 10px;
 }
@@ -379,9 +391,11 @@ input[type=text], select {
 .quizSubmit {
     display: flex;
     width: 100%;
+    margin-top: 20px;
+
   }
 
-.quiz-btn-container {
+.quiz-grid-container {
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
@@ -389,8 +403,8 @@ input[type=text], select {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". .";
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "answer answer" "submit next";
 }
 
 
