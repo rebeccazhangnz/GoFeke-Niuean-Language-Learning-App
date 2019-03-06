@@ -8,10 +8,48 @@ import FekeStatus from '../../client/components/FekeStatus'
 import CategoryList from '../../client/components/CategoryList'
 import CreateFeke from '../../client/components/CreateFeke'
 
-test('<Header />', () => {
-  const expected = '<Link />'
-  const wrap = shallow(<Header />)
-  expect(wrap.text()).toMatch(expected)
+test('<CategoryList />', () => {
+  const mockStore = configureStore()({
+    categoryList: [
+      { id: 1, name: 'family' },
+      { id: 2, name: 'food' },
+      { id: 3, name: 'greetings' },
+      { id: 4, name: 'numbers' },
+      { id: 5, name: 'time' },
+      { id: 6, name: 'body' }
+    ]
+  })
+  const wrap = shallow(
+    <Provider store={mockStore}>
+      <CategoryList />
+    </Provider>
+  )
+  const expected = { id: 4, name: 'numbers' }
+  const actual = wrap.state()['storeState'].categoryList[3]
+  expect(actual).toEqual(expected)
+})
+
+test('<FekeStatus />', () => {
+  const mockStore = configureStore()({
+    feke: [
+      {
+        id: 1,
+        category_id: 1,
+        name: 'Fekefeke',
+        village: 'Avatele',
+        image: 'feke-blue.png',
+        status: 'Level 1'
+      }
+    ]
+  })
+  const wrap = shallow(
+    <Provider store={mockStore}>
+      <FekeStatus />
+    </Provider>
+  )
+  const expected = "Fekefeke"
+  const actual = wrap.state()['storeState'].feke[0].name
+  expect(actual).toEqual(expected)
 })
 
 test('<Dashboard />', () => {
@@ -28,7 +66,7 @@ test('<Dashboard />', () => {
 })
 
 describe('test state <CreateFeke/> Component', () => {
-  it('start status should be level 1', () => {
+  it('there should be a blue feke image in this component', () => {
     const mockStore = configureStore()({ isUpdated: false })
     const wrap = render(
       <Provider store={mockStore}>
@@ -40,8 +78,8 @@ describe('test state <CreateFeke/> Component', () => {
   })
 })
 
-describe('test state <CreateFeke/> Component', () => {
-  it('start status should be level 1', () => {
+describe('test state <CreateFeke/> Component, which renders all 4 images', () => {
+  it('there should be 4 images in this component', () => {
     const mockStore = configureStore()({ isUpdated: false })
     const wrap = render(
       <Provider store={mockStore}>
@@ -51,4 +89,10 @@ describe('test state <CreateFeke/> Component', () => {
 
     expect(wrap.find('img').length).toBe(4)
   })
+})
+
+test('<Header />', () => {
+  const expected = '<Link />'
+  const wrap = shallow(<Header />)
+  expect(wrap.text()).toMatch(expected)
 })
