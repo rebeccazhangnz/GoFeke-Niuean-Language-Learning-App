@@ -5,9 +5,9 @@ Array [
   <div
     className="createfeke-page"
   >
-    <h2>
+    <h1>
       Mitaki! Select and name your feke
-    </h2>
+    </h1>
     <form
       onSubmit={[Function]}
     >
