@@ -37,7 +37,7 @@ class Quiz extends React.Component {
     checkAnswerSubmitted = () => {
         if (!this.state.submitted) {
             this.setState({
-                message: 'please submit your answer first, then press next button'
+                message: 'please select your answer first, then press next button'
             })
         }
     }
