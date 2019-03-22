@@ -62,7 +62,7 @@ class Flashcard extends React.Component {
 
         return (
             <div>
-                <h1>Select a flashcard and learn a new word</h1>
+                <h1>Hover the mouse over the Flashcard to see the English Meaning</h1>
                 <div className="ui centered grid">
                     <div className="eight wide column centered">
                         <div className="flip-box centered">
